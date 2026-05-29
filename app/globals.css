@@ -4,88 +4,92 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Ocean-inspired palette - Deep blues and teals with warm sand accent */
-  --background: oklch(0.98 0.005 220);
-  --foreground: oklch(0.15 0.02 230);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 230);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 230);
+  /* Powerful Ocean-inspired palette - Vibrant and impactful */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
   
-  /* Primary: Deep ocean blue */
-  --primary: oklch(0.35 0.12 230);
-  --primary-foreground: oklch(0.98 0.005 220);
+  /* Primary: Deep vibrant blue */
+  --primary: #0369a1;
+  --primary-foreground: #ffffff;
   
-  /* Secondary: Light sky blue */
-  --secondary: oklch(0.92 0.03 220);
-  --secondary-foreground: oklch(0.25 0.08 230);
+  /* Secondary: Light blue */
+  --secondary: #e0f2fe;
+  --secondary-foreground: #0c4a6e;
   
-  /* Muted: Soft gray-blue */
-  --muted: oklch(0.94 0.015 220);
-  --muted-foreground: oklch(0.45 0.03 230);
+  /* Muted */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
   
-  /* Accent: Teal/Cyan for energy */
-  --accent: oklch(0.65 0.15 195);
-  --accent-foreground: oklch(0.15 0.02 230);
+  /* Accent: Electric Cyan/Teal */
+  --accent: #06b6d4;
+  --accent-foreground: #ffffff;
   
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
+  /* Ocean Blue for gradients */
+  --ocean-start: #0c4a6e;
+  --ocean-mid: #0369a1;
+  --ocean-end: #0ea5e9;
   
-  --border: oklch(0.88 0.02 220);
-  --input: oklch(0.88 0.02 220);
-  --ring: oklch(0.45 0.12 230);
+  /* Teal for energy */
+  --teal: #14b8a6;
+  --teal-light: #5eead4;
   
-  --chart-1: oklch(0.55 0.15 230);
-  --chart-2: oklch(0.65 0.15 195);
-  --chart-3: oklch(0.45 0.1 230);
-  --chart-4: oklch(0.75 0.1 195);
-  --chart-5: oklch(0.35 0.12 230);
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
   
-  --radius: 0.5rem;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0ea5e9;
   
-  --sidebar: oklch(0.98 0.005 220);
-  --sidebar-foreground: oklch(0.15 0.02 230);
-  --sidebar-primary: oklch(0.35 0.12 230);
-  --sidebar-primary-foreground: oklch(0.98 0.005 220);
-  --sidebar-accent: oklch(0.92 0.03 220);
-  --sidebar-accent-foreground: oklch(0.25 0.08 230);
-  --sidebar-border: oklch(0.88 0.02 220);
-  --sidebar-ring: oklch(0.45 0.12 230);
+  --chart-1: #0369a1;
+  --chart-2: #06b6d4;
+  --chart-3: #14b8a6;
+  --chart-4: #0ea5e9;
+  --chart-5: #0c4a6e;
+  
+  --radius: 0.75rem;
+  
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #0369a1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e0f2fe;
+  --sidebar-accent-foreground: #0c4a6e;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #0ea5e9;
 }
 
 .dark {
-  --background: oklch(0.12 0.02 230);
-  --foreground: oklch(0.95 0.01 220);
-  --card: oklch(0.16 0.02 230);
-  --card-foreground: oklch(0.95 0.01 220);
-  --popover: oklch(0.16 0.02 230);
-  --popover-foreground: oklch(0.95 0.01 220);
-  --primary: oklch(0.65 0.15 195);
-  --primary-foreground: oklch(0.12 0.02 230);
-  --secondary: oklch(0.22 0.03 230);
-  --secondary-foreground: oklch(0.95 0.01 220);
-  --muted: oklch(0.22 0.03 230);
-  --muted-foreground: oklch(0.65 0.03 220);
-  --accent: oklch(0.55 0.15 195);
-  --accent-foreground: oklch(0.95 0.01 220);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.25 0.03 230);
-  --input: oklch(0.25 0.03 230);
-  --ring: oklch(0.55 0.15 195);
-  --chart-1: oklch(0.65 0.15 195);
-  --chart-2: oklch(0.55 0.15 230);
-  --chart-3: oklch(0.75 0.1 195);
-  --chart-4: oklch(0.45 0.1 230);
-  --chart-5: oklch(0.65 0.12 210);
-  --sidebar: oklch(0.16 0.02 230);
-  --sidebar-foreground: oklch(0.95 0.01 220);
-  --sidebar-primary: oklch(0.65 0.15 195);
-  --sidebar-primary-foreground: oklch(0.12 0.02 230);
-  --sidebar-accent: oklch(0.22 0.03 230);
-  --sidebar-accent-foreground: oklch(0.95 0.01 220);
-  --sidebar-border: oklch(0.25 0.03 230);
-  --sidebar-ring: oklch(0.55 0.15 195);
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+  --primary: #0ea5e9;
+  --primary-foreground: #0f172a;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #06b6d4;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #334155;
+  --ring: #0ea5e9;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #0ea5e9;
+  --sidebar-primary-foreground: #0f172a;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #334155;
+  --sidebar-ring: #0ea5e9;
 }
 
 @theme inline {
@@ -150,14 +154,64 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--muted);
+  background: #e2e8f0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: #0369a1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: #06b6d4;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 50%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ocean gradient backgrounds */
+.ocean-gradient {
+  background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0ea5e9 100%);
+}
+
+.ocean-gradient-radial {
+  background: radial-gradient(ellipse at top, #0ea5e9, #0369a1, #0c4a6e);
+}
+
+/* Animated wave keyframes */
+@keyframes wave {
+  0% { transform: translateX(0) translateZ(0) scaleY(1); }
+  50% { transform: translateX(-25%) translateZ(0) scaleY(0.8); }
+  100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+}
+
+.animate-wave {
+  animation: wave 15s ease-in-out infinite;
+}
+
+.animate-wave-slow {
+  animation: wave 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glow effect */
+.glow-accent {
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.4);
+}
+
+.glow-primary {
+  box-shadow: 0 0 40px rgba(3, 105, 161, 0.4);
 }

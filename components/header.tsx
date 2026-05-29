@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Waves } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -29,18 +29,24 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm py-3"
+          ? "bg-white/95 backdrop-blur-md shadow-lg shadow-[#0369a1]/5 py-3"
           : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
+          <div className={cn(
+            "w-10 h-10 rounded-xl flex items-center justify-center transition-colors",
+            isScrolled ? "bg-[#0369a1]" : "bg-white/20 backdrop-blur-sm"
+          )}>
+            <Waves className="w-5 h-5 text-white" />
+          </div>
           <span
             className={cn(
               "text-xl font-bold tracking-tight transition-colors",
-              isScrolled ? "text-primary" : "text-white"
+              isScrolled ? "text-[#0f172a]" : "text-white"
             )}
           >
             THIAGO REBOLLO
@@ -54,20 +60,24 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-accent",
-                isScrolled ? "text-foreground" : "text-white/90"
+                "text-sm font-medium transition-colors relative group",
+                isScrolled ? "text-[#475569] hover:text-[#0369a1]" : "text-white/90 hover:text-white"
               )}
             >
               {link.label}
+              <span className={cn(
+                "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
+                isScrolled ? "bg-[#06b6d4]" : "bg-[#5eead4]"
+              )} />
             </Link>
           ))}
           <Button
             asChild
             className={cn(
-              "rounded-full px-6",
+              "rounded-full px-6 py-5 font-semibold transition-all duration-300",
               isScrolled
-                ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                : "bg-white text-primary hover:bg-white/90"
+                ? "bg-gradient-to-r from-[#0369a1] to-[#0ea5e9] text-white hover:opacity-90 shadow-lg"
+                : "bg-white text-[#0369a1] hover:bg-[#f0fdfa] shadow-lg"
             )}
           >
             <Link href="#contato">Começar Agora</Link>
@@ -78,8 +88,10 @@ export function Header() {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={cn(
-            "md:hidden p-2 transition-colors",
-            isScrolled ? "text-foreground" : "text-white"
+            "md:hidden p-2 rounded-xl transition-colors",
+            isScrolled 
+              ? "text-[#0f172a] hover:bg-[#f1f5f9]" 
+              : "text-white hover:bg-white/10"
           )}
           aria-label="Toggle menu"
         >
@@ -89,19 +101,22 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-[#e2e8f0] shadow-xl">
+          <nav className="container mx-auto px-4 py-6 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-foreground text-base font-medium py-2 hover:text-accent transition-colors"
+                className="text-[#0f172a] text-lg font-medium py-3 px-4 rounded-xl hover:bg-[#f1f5f9] hover:text-[#0369a1] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
-            <Button asChild className="rounded-full mt-2">
+            <Button 
+              asChild 
+              className="rounded-full mt-4 py-6 bg-gradient-to-r from-[#0369a1] to-[#0ea5e9] text-white font-semibold"
+            >
               <Link href="#contato" onClick={() => setIsMobileMenuOpen(false)}>
                 Começar Agora
               </Link>

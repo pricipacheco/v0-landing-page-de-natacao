@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Mail, Waves } from "lucide-react"
+import { Instagram, Mail, Waves, Youtube, ArrowUpRight } from "lucide-react"
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -15,90 +15,118 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="relative overflow-hidden">
       {/* Main footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
-          {/* Brand */}
-          <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Waves className="w-6 h-6 text-accent" />
-              <span className="text-xl font-bold tracking-tight">
-                THIAGO REBOLLO
-              </span>
-            </Link>
-            <p className="text-primary-foreground/70 leading-relaxed mb-6">
-              Assessoria online especializada em natação para águas abertas. 
-              Transformando nadadores e triatletas através de metodologia 
-              comprovada e acompanhamento personalizado.
-            </p>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://instagram.com/thiagorebollo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-                aria-label="Instagram"
+      <div className="bg-gradient-to-br from-[#0c4a6e] via-[#0369a1] to-[#0c4a6e]">
+        {/* Wave top */}
+        <div className="h-16 overflow-hidden">
+          <svg 
+            className="w-full h-full"
+            viewBox="0 0 1440 60" 
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#f8fafc"
+              d="M0,30L48,25C96,20,192,10,288,10C384,10,480,20,576,25C672,30,768,30,864,25C960,20,1056,10,1152,10C1248,10,1344,20,1392,25L1440,30L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            />
+          </svg>
+        </div>
+
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid md:grid-cols-4 gap-12">
+            {/* Brand */}
+            <div className="md:col-span-2">
+              <Link href="/" className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-[#06b6d4] flex items-center justify-center">
+                  <Waves className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-2xl font-bold text-white tracking-tight">
+                  THIAGO REBOLLO
+                </span>
+              </Link>
+              <p className="text-white/70 leading-relaxed mb-8 max-w-md">
+                Assessoria online especializada em natação para águas abertas. 
+                Transformando nadadores e triatletas através de metodologia 
+                comprovada e acompanhamento personalizado.
+              </p>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://instagram.com/thiagorebollo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-[#06b6d4] transition-all duration-300 group"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5 text-white" />
+                </a>
+                <a
+                  href="https://youtube.com/@thiagorebollo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-[#06b6d4] transition-all duration-300 group"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-5 h-5 text-white" />
+                </a>
+                <a
+                  href="mailto:contato@thiagorebollo.com"
+                  className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center hover:bg-[#06b6d4] transition-all duration-300 group"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5 text-white" />
+                </a>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div>
+              <h4 className="font-bold text-white mb-6 text-lg">Navegação</h4>
+              <nav className="space-y-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="flex items-center gap-2 text-white/70 hover:text-[#5eead4] transition-colors group"
+                  >
+                    {link.label}
+                    <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            {/* CTA */}
+            <div>
+              <h4 className="font-bold text-white mb-6 text-lg">Pronto para Evoluir?</h4>
+              <p className="text-white/70 mb-6">
+                Entre em contato e descubra como transformar sua natação em águas abertas.
+              </p>
+              <Link
+                href="#contato"
+                className="inline-flex items-center gap-2 bg-[#06b6d4] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#14b8a6] transition-colors shadow-lg hover:shadow-[#06b6d4]/25"
               >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:contato@thiagorebollo.com"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
+                Começar Agora
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
-
-          {/* Navigation */}
-          <div>
-            <h4 className="font-semibold mb-4">Navegação</h4>
-            <nav className="space-y-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block text-primary-foreground/70 hover:text-accent transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          {/* CTA */}
-          <div>
-            <h4 className="font-semibold mb-4">Pronto para Evoluir?</h4>
-            <p className="text-primary-foreground/70 mb-6">
-              Entre em contato e descubra como a assessoria pode transformar 
-              sua natação em águas abertas.
-            </p>
-            <Link
-              href="#contato"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium hover:bg-accent/90 transition-colors"
-            >
-              Começar Agora
-            </Link>
-          </div>
         </div>
-      </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>
-              &copy; {currentYear} Thiago Rebollo. Todos os direitos reservados.
-            </p>
-            <div className="flex items-center gap-6">
-              <Link href="#" className="hover:text-primary-foreground transition-colors">
-                Política de Privacidade
-              </Link>
-              <Link href="#" className="hover:text-primary-foreground transition-colors">
-                Termos de Uso
-              </Link>
+        {/* Bottom bar */}
+        <div className="border-t border-white/10">
+          <div className="container mx-auto px-4 py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
+              <p>
+                &copy; {currentYear} Thiago Rebollo. Todos os direitos reservados.
+              </p>
+              <div className="flex items-center gap-6">
+                <Link href="#" className="hover:text-white transition-colors">
+                  Política de Privacidade
+                </Link>
+                <Link href="#" className="hover:text-white transition-colors">
+                  Termos de Uso
+                </Link>
+              </div>
             </div>
           </div>
         </div>

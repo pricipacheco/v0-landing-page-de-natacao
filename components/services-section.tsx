@@ -1,15 +1,30 @@
 "use client"
 
-import { Check, ArrowRight } from "lucide-react"
+import { Check, ArrowRight, Star, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 const services = [
   {
+    name: "Consultoria Pontual",
+    description: "Para quem busca orientação específica em algum aspecto",
+    price: "Sob consulta",
+    featured: false,
+    icon: Star,
+    features: [
+      "Sessão de análise técnica",
+      "Correções personalizadas",
+      "Dicas de navegação",
+      "Orientação de equipamentos",
+      "Relatório detalhado",
+    ],
+  },
+  {
     name: "Assessoria Individual",
     description: "Acompanhamento completo e personalizado para seus objetivos",
     price: "Sob consulta",
     featured: true,
+    icon: Zap,
     features: [
       "Planilhas de treino semanais personalizadas",
       "Análise de vídeo mensal",
@@ -21,23 +36,11 @@ const services = [
     ],
   },
   {
-    name: "Consultoria Pontual",
-    description: "Para quem busca orientação específica em algum aspecto",
-    price: "Sob consulta",
-    featured: false,
-    features: [
-      "Sessão de análise técnica",
-      "Correções personalizadas",
-      "Dicas de navegação",
-      "Orientação de equipamentos",
-      "Relatório detalhado",
-    ],
-  },
-  {
     name: "Grupos de Treino",
     description: "Treinos em grupo online com comunidade de atletas",
     price: "Sob consulta",
     featured: false,
+    icon: Star,
     features: [
       "Planilhas semanais de treino",
       "Encontros online quinzenais",
@@ -50,54 +53,69 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="servicos" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="servicos" className="py-24 lg:py-32 bg-[#f8fafc] relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-gradient-to-r from-[#06b6d4]/10 to-transparent rounded-full blur-3xl -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-gradient-to-l from-[#0369a1]/10 to-transparent rounded-full blur-3xl -translate-y-1/2" />
+      
+      <div className="container mx-auto px-4 relative">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-accent font-medium text-sm uppercase tracking-wider">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="inline-flex items-center gap-2 bg-[#0369a1]/10 text-[#0369a1] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
+            <span className="w-2 h-2 rounded-full bg-[#06b6d4]" />
             Serviços
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6 text-balance">
-            Escolha o Plano Ideal para Você
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0f172a] mb-6 leading-tight">
+            Escolha o Plano <span className="gradient-text">Ideal</span> para Você
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-xl text-[#64748b] leading-relaxed">
             Diferentes formatos de acompanhamento para atender às suas necessidades 
             e objetivos, sempre com foco em resultados.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {services.map((service) => (
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
+          {services.map((service, index) => (
             <div
               key={service.name}
-              className={`relative rounded-2xl p-8 border transition-all duration-300 ${
+              className={`relative rounded-3xl p-8 transition-all duration-500 flex flex-col ${
                 service.featured
-                  ? "bg-primary text-primary-foreground border-primary shadow-xl scale-105"
-                  : "bg-card border-border hover:border-accent/50 hover:shadow-lg"
+                  ? "bg-gradient-to-br from-[#0c4a6e] via-[#0369a1] to-[#0ea5e9] shadow-2xl shadow-[#0369a1]/30 scale-105 z-10"
+                  : "bg-white border-2 border-[#e2e8f0] hover:border-[#06b6d4]/50 hover:shadow-xl"
               }`}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               {service.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-accent text-accent-foreground text-xs font-semibold px-4 py-1 rounded-full">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
+                    <Zap className="w-4 h-4" />
                     Mais Popular
                   </span>
                 </div>
               )}
 
-              <div className="mb-6">
+              <div className="mb-8">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
+                  service.featured 
+                    ? "bg-white/20" 
+                    : "bg-gradient-to-br from-[#06b6d4] to-[#0ea5e9]"
+                }`}>
+                  <service.icon className={`w-7 h-7 ${service.featured ? "text-white" : "text-white"}`} />
+                </div>
+                
                 <h3
-                  className={`text-xl font-semibold mb-2 ${
-                    service.featured ? "text-primary-foreground" : "text-foreground"
+                  className={`text-2xl font-bold mb-3 ${
+                    service.featured ? "text-white" : "text-[#0f172a]"
                   }`}
                 >
                   {service.name}
                 </h3>
                 <p
-                  className={`text-sm ${
+                  className={`text-base ${
                     service.featured
-                      ? "text-primary-foreground/80"
-                      : "text-muted-foreground"
+                      ? "text-white/80"
+                      : "text-[#64748b]"
                   }`}
                 >
                   {service.description}
@@ -106,31 +124,31 @@ export function ServicesSection() {
 
               <div className="mb-8">
                 <span
-                  className={`text-2xl font-bold ${
-                    service.featured ? "text-primary-foreground" : "text-foreground"
+                  className={`text-3xl font-bold ${
+                    service.featured ? "text-white" : "text-[#0f172a]"
                   }`}
                 >
                   {service.price}
                 </span>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-4 mb-10 flex-grow">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <div
-                      className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
+                      className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
                         service.featured
-                          ? "bg-accent text-accent-foreground"
-                          : "bg-accent/20 text-accent"
+                          ? "bg-[#5eead4] text-[#0c4a6e]"
+                          : "bg-[#06b6d4]/20 text-[#06b6d4]"
                       }`}
                     >
-                      <Check className="w-3 h-3" />
+                      <Check className="w-4 h-4" strokeWidth={3} />
                     </div>
                     <span
-                      className={`text-sm ${
+                      className={`${
                         service.featured
-                          ? "text-primary-foreground/90"
-                          : "text-muted-foreground"
+                          ? "text-white/90"
+                          : "text-[#475569]"
                       }`}
                     >
                       {feature}
@@ -141,15 +159,15 @@ export function ServicesSection() {
 
               <Button
                 asChild
-                className={`w-full rounded-full ${
+                className={`w-full rounded-full py-6 text-lg font-semibold transition-all duration-300 ${
                   service.featured
-                    ? "bg-white text-primary hover:bg-white/90"
-                    : "bg-primary text-primary-foreground hover:bg-primary/90"
+                    ? "bg-white text-[#0369a1] hover:bg-[#f0fdfa] shadow-lg"
+                    : "bg-gradient-to-r from-[#0369a1] to-[#0ea5e9] text-white hover:opacity-90 shadow-md hover:shadow-lg"
                 }`}
               >
                 <Link href="#contato" className="flex items-center justify-center gap-2">
                   Quero saber mais
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
             </div>
