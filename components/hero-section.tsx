@@ -1,136 +1,135 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ChevronDown, Play, Award, Users, Globe } from "lucide-react"
-import Link from "next/link"
+import { motion } from "framer-motion"
+import { MessageCircle, ChevronDown, Award, Users, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030712]">
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
           src="/images/hero-swimmer.png"
           alt="Nadador em águas abertas"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0369a1]/80 to-[#0369a1]/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/70 via-[#030712]/50 to-[#030712]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-transparent to-[#030712]/60" />
       </div>
-      
-      {/* Animated Wave Overlay at Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
-        <svg 
-          className="absolute bottom-0 w-[200%] h-full animate-wave"
-          viewBox="0 0 1440 120" 
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#f8fafc"
-            d="M0,64L48,69.3C96,75,192,85,288,90.7C384,96,480,96,576,85.3C672,75,768,53,864,48C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
-          />
-        </svg>
-        <svg 
-          className="absolute bottom-0 w-[200%] h-full animate-wave-slow opacity-60"
-          viewBox="0 0 1440 120" 
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#f8fafc"
-            d="M0,96L48,90.7C96,85,192,75,288,74.7C384,75,480,85,576,90.7C672,96,768,96,864,85.3C960,75,1056,53,1152,48C1248,43,1344,53,1392,58.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
-          />
-        </svg>
-      </div>
+
+      {/* Animated gradient orbs */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-600/15 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-24 pb-32">
-        <div className="max-w-4xl">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-20">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 mb-8">
-            <span className="w-2 h-2 rounded-full bg-[#06b6d4] animate-pulse" />
-            <span className="text-white text-sm font-medium">
-              Assessoria Online de Natação em Águas Abertas
-            </span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
+          >
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-sm text-gray-300">Assessoria Especializada em Águas Abertas</span>
+          </motion.div>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-[1.1]">
-            Conquiste as{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-[#5eead4]">Águas Abertas</span>
-              <span className="absolute bottom-2 left-0 w-full h-4 bg-[#06b6d4]/30 -skew-x-3" />
-            </span>
-          </h1>
+          {/* Main Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+          >
+            Não é planilha pronta.
+            <br />
+            <span className="gradient-text text-glow">É treino do seu jeito.</span>
+          </motion.h1>
 
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl leading-relaxed">
-            Treinamento especializado para nadadores e triatletas que querem 
-            <span className="text-[#5eead4] font-semibold"> dominar o mar</span>, 
-            com metodologia comprovada e acompanhamento individual.
-          </p>
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+          >
+            Assessoria online personalizada para nadadores e triatletas que querem 
+            <span className="text-white font-medium"> evoluir de verdade </span> 
+            em águas abertas. Com acompanhamento real e ajustes constantes.
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-start gap-4 mb-16">
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#06b6d4] hover:bg-[#14b8a6] text-white rounded-full px-10 py-7 text-lg font-semibold shadow-xl hover:shadow-2xl hover:shadow-[#06b6d4]/25 transition-all duration-300 glow-accent"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          >
+            <a
+              href="https://wa.me/5521999999999?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-8 py-4 rounded-full whatsapp-btn text-white font-semibold text-lg transition-all duration-300"
             >
-              <Link href="#contato">Quero Começar Agora</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-white/40 bg-white/5 text-white hover:bg-white/10 hover:border-white/60 rounded-full px-8 py-7 text-lg font-semibold backdrop-blur-sm"
+              <MessageCircle className="w-5 h-5" />
+              Quero um Diagnóstico Gratuito
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            <a
+              href="#metodo"
+              className="flex items-center gap-2 px-6 py-4 text-gray-400 hover:text-white transition-colors"
             >
-              <Link href="#metodologia" className="flex items-center gap-3">
-                <Play className="w-5 h-5 fill-current" />
-                Conhecer Metodologia
-              </Link>
-            </Button>
-          </div>
+              Conhecer o Método
+            </a>
+          </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 md:gap-12 max-w-2xl">
-            <div className="relative">
-              <div className="flex items-center gap-3 mb-2">
-                <Award className="w-6 h-6 text-[#5eead4]" />
-                <span className="text-4xl md:text-5xl font-bold text-white">10+</span>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
+          >
+            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
+                <Award className="w-6 h-6 text-cyan-400" />
               </div>
-              <p className="text-white/60 text-sm">Anos de Experiência</p>
+              <div className="text-3xl font-bold text-white mb-1">+12</div>
+              <div className="text-sm text-gray-500">Anos de Experiência</div>
             </div>
-            <div className="relative">
-              <div className="flex items-center gap-3 mb-2">
-                <Users className="w-6 h-6 text-[#5eead4]" />
-                <span className="text-4xl md:text-5xl font-bold text-white">500+</span>
+            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
+                <Users className="w-6 h-6 text-cyan-400" />
               </div>
-              <p className="text-white/60 text-sm">Atletas Treinados</p>
+              <div className="text-3xl font-bold text-white mb-1">+500</div>
+              <div className="text-sm text-gray-500">Atletas Assessorados</div>
             </div>
-            <div className="relative">
-              <div className="flex items-center gap-3 mb-2">
-                <Globe className="w-6 h-6 text-[#5eead4]" />
-                <span className="text-4xl md:text-5xl font-bold text-white">100%</span>
+            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-cyan-400" />
               </div>
-              <p className="text-white/60 text-sm">Online</p>
+              <div className="text-3xl font-bold text-white mb-1">34km</div>
+              <div className="text-sm text-gray-500">Canal da Mancha</div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-36 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-          <Link
-            href="#sobre"
-            className="flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors"
-          >
-            <span className="text-xs uppercase tracking-widest">Descubra</span>
-            <ChevronDown className="w-6 h-6" />
-          </Link>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <a href="#sobre" className="flex flex-col items-center gap-2 text-gray-500 hover:text-cyan-400 transition-colors">
+            <span className="text-xs uppercase tracking-wider">Saiba mais</span>
+            <ChevronDown className="w-5 h-5 animate-bounce" />
+          </a>
+        </motion.div>
       </div>
     </section>
   )
