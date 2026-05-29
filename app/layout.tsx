@@ -1,15 +1,24 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter"
+})
+
+const playfair = Playfair_Display({ 
+  subsets: ["latin"],
+  variable: "--font-playfair"
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Thiago Rebollo | Assessoria de Natação em Águas Abertas',
+  description: 'Assessoria online especializada em natação para águas abertas. Treinamento personalizado para nadadores e triatletas que buscam melhorar performance no mar, lagos e rios.',
   generator: 'v0.app',
+  keywords: ['natação', 'águas abertas', 'triathlon', 'assessoria', 'treinamento', 'performance'],
+  authors: [{ name: 'Thiago Rebollo' }],
   icons: {
     icon: [
       {
@@ -35,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="pt-BR" className="bg-background">
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
