@@ -8,7 +8,7 @@ const services = [
   {
     name: "Assessoria Express",
     description: "Para quem busca orientação específica em algum aspecto",
-    price: "R$ 199,00 (pagamento único) ",
+    price: "R$ 199,00 (pagamento único)",
     featured: false,
     icon: Star,
     features: [
@@ -23,7 +23,7 @@ const services = [
   {
     name: "Natação de Águas Abertas",
     description: "Acompanhamento completo e personalizado para seus objetivos",
-    price: "R$ 299,90 (mensal) ",
+    price: "R$ 299,90 (mensal)",
     featured: true,
     icon: Zap,
     features: [
@@ -41,7 +41,7 @@ const services = [
   {
     name: "Triathlon",
     description: "Treinamento completo para atletas de triathlon",
-    price: "R$ 399,90 (mensal) ",
+    price: "R$ 399,90 (mensal)",
     featured: false,
     icon: Star,
     features: [
