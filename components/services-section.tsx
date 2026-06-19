@@ -129,16 +129,6 @@ export function ServicesSection() {
                 </p>
               </div>
 
-              <div className="mb-8">
-                <span
-                  className={`text-3xl font-bold ${
-                    service.featured ? "text-white" : "text-[#0f172a]"
-                  }`}
-                >
-                  {service.price}
-                </span>
-              </div>
-
               <ul className="space-y-4 mb-10 flex-grow">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
@@ -160,6 +150,16 @@ export function ServicesSection() {
                     >
                       {feature}
                     </span>
+                  </div>
+              
+              <div className="mb-8">
+                <span
+                  className={`text-3xl font-bold ${
+                    service.featured ? "text-white" : "text-[#0f172a]"
+                  }`}
+                >
+                  {service.price}
+                </span>
                   </li>
                 ))}
               </ul>
