@@ -62,7 +62,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://wa.me/5521999999999?text=Olá Thiago! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
+              href="https://wa.me/5511996139633?text=Olá Thiago! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-[#030712] font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-0.5"
@@ -105,7 +105,7 @@ export function Header() {
                   </Link>
                 ))}
                 <a
-                  href="https://wa.me/5521999999999?text=Olá Thiago! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
+                  href="https://wa.me/5511996139633?text=Olá Thiago! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 mt-4 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-[#030712] font-semibold"
