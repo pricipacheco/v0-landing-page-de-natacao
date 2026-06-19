@@ -173,7 +173,7 @@ export function ServicesSection() {
                 }`}
               >
                 <Link href="#contato" className="flex items-center justify-center gap-2">
-                  Quero saber mais
+                  Contratar agora
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
