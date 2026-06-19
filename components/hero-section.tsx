@@ -45,9 +45,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
-            Não é planilha pronta.
+            Você não está evoluindo
             <br />
-            <span className="gradient-text text-glow">É treino do seu jeito.</span>
+            <span className="gradient-text text-glow">porque está treinando sozinho.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -57,9 +57,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Assessoria online personalizada para nadadores e triatletas que querem 
-            <span className="text-white font-medium"> evoluir de verdade </span> 
-            em águas abertas. Com acompanhamento real e ajustes constantes.
+            Assessoria de Natação em Águas Abertas para nadadores e triatletas. 
+            <span className="text-white font-medium"> Comece a evoluir </span> 
+            com método, correção técnica e acompanhamento real.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -83,7 +83,7 @@ export function HeroSection() {
               href="#metodo"
               className="flex items-center gap-2 px-6 py-4 text-gray-400 hover:text-white transition-colors"
             >
-              Conhecer o Método
+              Conhecer Planos
             </a>
           </motion.div>
 
