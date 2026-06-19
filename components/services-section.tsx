@@ -156,7 +156,7 @@ export function ServicesSection() {
 
               <div className="mb-8">
                 <span
-                  className={`text-3xl font-bold ${
+                  className={`text-2xl font-bold ${
                     service.featured ? "text-white" : "text-[#0f172a]"
                   }`}
                 >
