@@ -6,14 +6,13 @@ import Link from "next/link"
 
 const services = [
   {
-    name: "Assessoria Express",
+    name: "Consultoria Pontual",
     description: "Para quem busca orientação específica em algum aspecto",
-    price: "R$ 199,00 (pagamento único)",
+    price: "Sob consulta",
     featured: false,
     icon: Star,
     features: [
-      "Sessão ONLINE com Thiago Rebollo",
-      "Análise técnica",
+      "Sessão de análise técnica",
       "Correções personalizadas",
       "Dicas de navegação",
       "Orientação de equipamentos",
@@ -21,39 +20,33 @@ const services = [
     ],
   },
   {
-    name: "Natação de Águas Abertas",
+    name: "Assessoria Individual",
     description: "Acompanhamento completo e personalizado para seus objetivos",
-    price: "R$ 299,90 (mensal)",
+    price: "Sob consulta",
     featured: true,
     icon: Zap,
     features: [
       "Planilhas de treino semanais personalizadas",
-      "Análise de vídeos",
+      "Análise de vídeo mensal",
       "Acompanhamento via WhatsApp",
       "Ajustes de treino conforme feedback",
       "Periodização para suas provas",
       "Suporte para nutrição e equipamentos",
-      "Acesso ao grupo de Whatsapp da Rebollo Assessoria",
-      "Orientação pré-provas",
-      "Acompanhamento do Thiago Rebollo em competições (com estrutura completa)"
+      "Acesso a conteúdos exclusivos",
     ],
   },
   {
-    name: "Triathlon",
-    description: "Treinamento completo para atletas de triathlon",
-    price: "R$ 399,90 (mensal)",
+    name: "Grupos de Treino",
+    description: "Treinos em grupo online com comunidade de atletas",
+    price: "Sob consulta",
     featured: false,
     icon: Star,
     features: [
-      "Planilhas de treino semanais personalizadas",
-      "Análise de vídeos",
-      "Acompanhamento via Whatsapp",
-      "Ajuste de treino conforme feedback",
-      "Periodização para suas provas",
-      "Suporte para nutrição e equipamentos",
-      "Acesso ao grupo de Whatsapp da Rebollo Assessoria",
-      "Orientação pré-provas",
-      "Acompanhamento do Thiago Rebollo no IronMan (com estrutura completa)"
+      "Planilhas semanais de treino",
+      "Encontros online quinzenais",
+      "Comunidade exclusiva",
+      "Desafios mensais",
+      "Conteúdos educativos",
     ],
   },
 ]
@@ -129,6 +122,16 @@ export function ServicesSection() {
                 </p>
               </div>
 
+              <div className="mb-8">
+                <span
+                  className={`text-3xl font-bold ${
+                    service.featured ? "text-white" : "text-[#0f172a]"
+                  }`}
+                >
+                  {service.price}
+                </span>
+              </div>
+
               <ul className="space-y-4 mb-10 flex-grow">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
@@ -149,16 +152,7 @@ export function ServicesSection() {
                       }`}
                     >
                       {feature}
-                  </div>
-      
-              <div className="mb-8">
-                <span
-                  className={`text-3xl font-bold ${
-                    service.featured ? "text-white" : "text-[#0f172a]"
-                  }`}
-                >
-                  {service.price}
-                </span>
+                    </span>
                   </li>
                 ))}
               </ul>
