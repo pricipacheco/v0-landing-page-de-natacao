@@ -6,13 +6,14 @@ import Link from "next/link"
 
 const services = [
   {
-    name: "Consultoria Pontual",
+    name: "Assessoria Express",
     description: "Para quem busca orientação específica em algum aspecto",
-    price: "Sob consulta",
+    price: "R$ 199,00 (pagamento único) ",
     featured: false,
     icon: Star,
     features: [
-      "Sessão de análise técnica",
+      "Sessão ONLINE com Thiago Rebollo"
+      "Análise técnica",
       "Correções personalizadas",
       "Dicas de navegação",
       "Orientação de equipamentos",
@@ -20,33 +21,39 @@ const services = [
     ],
   },
   {
-    name: "Assessoria Individual",
+    name: "Natação de Águas Abertas",
     description: "Acompanhamento completo e personalizado para seus objetivos",
-    price: "Sob consulta",
+    price: "R$ 299,90 (mensal) ",
     featured: true,
     icon: Zap,
     features: [
       "Planilhas de treino semanais personalizadas",
-      "Análise de vídeo mensal",
+      "Análise de vídeos",
       "Acompanhamento via WhatsApp",
       "Ajustes de treino conforme feedback",
       "Periodização para suas provas",
       "Suporte para nutrição e equipamentos",
-      "Acesso a conteúdos exclusivos",
+      "Acesso ao grupo de Whatsapp da Rebollo Assessoria",
+      "Orientação pré-provas"
+      "Acompanhamento do Thiago Rebollo em competições (com estrutura completa)"
     ],
   },
   {
-    name: "Grupos de Treino",
-    description: "Treinos em grupo online com comunidade de atletas",
-    price: "Sob consulta",
+    name: "Triathlon",
+    description: "Treinamento completo para atletas de triathlon",
+    price: "R$ 399,90 (mensal) ",
     featured: false,
     icon: Star,
     features: [
-      "Planilhas semanais de treino",
-      "Encontros online quinzenais",
-      "Comunidade exclusiva",
-      "Desafios mensais",
-      "Conteúdos educativos",
+      "Planilhas de treino semanais personalizadas",
+      "Análise de vídeos",
+      "Acompanhamento via Whatsapp",
+      "Ajuste de treino conforme feedback",
+      "Periodização para suas provas",
+      "Suporte para nutrição e equipamentos"
+      "Acesso ao grupo de Whatsapp da Rebollo Assessoria"
+      "Orientação pré-provas"
+      "Acompanhamento do Thiago Rebollo no IronMan (com estrutura completa)"
     ],
   },
 ]
