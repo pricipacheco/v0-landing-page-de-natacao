@@ -8,11 +8,11 @@ const services = [
   {
     name: "Assessoria Express",
     description: "Para quem busca orientação específica em algum aspecto",
-    price: "R$ 199,00 pagamento único",
+    price: "R$ 199,00 (pagamento único)",
     featured: false,
     icon: Star,
     features: [
-      "Sessão ONLINE com Thiago Rebollo"
+      "Sessão ONLINE com Thiago Rebollo",
       "Análise técnica",
       "Correções personalizadas",
       "Dicas de navegação",
@@ -23,7 +23,7 @@ const services = [
   {
     name: "Natação de Águas Abertas",
     description: "Acompanhamento completo e personalizado para seus objetivos",
-    price: "R$ 299,90 mensal",
+    price: "R$ 299,90 (mensal)",
     featured: true,
     icon: Zap,
     features: [
@@ -34,14 +34,14 @@ const services = [
       "Periodização para suas provas",
       "Suporte para nutrição e equipamentos",
       "Acesso ao grupo de Whatsapp da Rebollo Assessoria",
-      "Orientação pré-provas"
-      "Acompanhamento do Thiago Rebollo em competições com estrutura completa"
+      "Orientação pré-provas",
+      "Acompanhamento do Thiago Rebollo em competições (com estrutura completa)"
     ],
   },
   {
     name: "Triathlon",
     description: "Treinamento completo para atletas de triathlon",
-    price: "R$ 399,90 mensal",
+    price: "R$ 399,90 (mensal)",
     featured: false,
     icon: Star,
     features: [
@@ -50,10 +50,10 @@ const services = [
       "Acompanhamento via Whatsapp",
       "Ajuste de treino conforme feedback",
       "Periodização para suas provas",
-      "Suporte para nutrição e equipamentos"
-      "Acesso ao grupo de Whatsapp da Rebollo Assessoria"
-      "Orientação pré-provas"
-      "Acompanhamento do Thiago Rebollo no IronMan com estrutura completa"
+      "Suporte para nutrição e equipamentos",
+      "Acesso ao grupo de Whatsapp da Rebollo Assessoria",
+      "Orientação pré-provas",
+      "Acompanhamento do Thiago Rebollo no IronMan (com estrutura completa)"
     ],
   },
 ]
