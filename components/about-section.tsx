@@ -46,7 +46,7 @@ export function AboutSection() {
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
               <Image
-                src="/images/thiago-rebollo.png"
+                src="/images/Thiago-treinador-rebollo.png"
                 alt="Thiago Rebollo - Atleta e Treinador de Águas Abertas"
                 fill
                 className="object-cover"
