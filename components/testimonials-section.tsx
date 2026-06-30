@@ -5,25 +5,25 @@ import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Marina Costa",
+    name: "Nome da Aluna",
     role: "Triatleta Amadora",
     image: "aluna.assessoria.png",
     rating: 5,
-    achievement: "Completou seu primeiro Ironman 70.3",
+    achievement: "Melhorou seu ritmo...",
   },
   {
-    name: "Ricardo Mendes",
-    role: "Nadador Masters",
+    name: "Danilo Monteiro",
+    role: "Nadador",
     image: "danilo.monteiro.png",
     rating: 5,
-    achievement: "Pódio na Travessia dos Fortes",
+    achievement: "Completou sua primeira prova de 5km em 2025",
   },
   {
-    name: "Fernanda Lima",
-    role: "Triatleta Elite",
+    name: "Nome de Aluno",
+    role: "Triatleta",
     image: "aluno.evolucao.png",
     rating: 5,
-    achievement: "Qualificação para o Mundial",
+    achievement: "Completou o IronMan Brasil",
   },
 ]
 
