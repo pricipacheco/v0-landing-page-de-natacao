@@ -24,7 +24,7 @@ const contactInfo = [
 
 export function ContactSection() {
   return (
-    <section id="contato" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section id="contato" className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[150px]" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-600/5 rounded-full blur-[120px]" />
@@ -127,7 +127,7 @@ export function ContactSection() {
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="flex items-center gap-4 bg-gray-50 rounded-2xl p-4 border border-gray-100 hover:border-cyan-500/30 hover:bg-cyan-500/5 transition-all duration-300 group"
+                  className="flex items-center gap-4 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm hover:border-cyan-500/30 hover:shadow-md transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0 group-hover:bg-cyan-500/20 transition-colors">
                     <item.icon className="w-5 h-5 text-cyan-600" />
@@ -140,7 +140,7 @@ export function ContactSection() {
               ))}
 
               {/* Atendimento (no link) */}
-              <div className="flex items-center gap-4 bg-gray-50 rounded-2xl p-4 border border-gray-100">
+              <div className="flex items-center gap-4 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-cyan-600" />
                 </div>
