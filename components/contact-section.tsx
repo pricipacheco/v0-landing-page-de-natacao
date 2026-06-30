@@ -1,210 +1,160 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Instagram, MessageCircle, Send, CheckCircle, MapPin } from "lucide-react"
+import { motion } from "framer-motion"
+import { Mail, Instagram, MessageCircle, MapPin, Clock } from "lucide-react"
+import Image from "next/image"
+
+const contactInfo = [
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "(11) 99613-9633",
+    href: "https://wa.me/5511996139633?text=Olá Thiago! Quero saber mais sobre a assessoria personalizada para águas abertas.",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    value: "@thiagorebollo",
+    href: "https://instagram.com/thiagorebollo",
+  },
+  {
+    icon: Mail,
+    label: "E-mail",
+    value: "contato@thiagorebollo.com",
+    href: "mailto:contato@thiagorebollo.com",
+  },
+]
 
 export function ContactSection() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitted(true)
-    setTimeout(() => setIsSubmitted(false), 3000)
-  }
-
   return (
-    <section id="contato" className="py-24 lg:py-32 bg-[#f8fafc] relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-gradient-to-br from-[#06b6d4]/10 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-[#0369a1]/10 to-transparent rounded-full blur-3xl" />
-      
+    <section id="contato" className="py-24 lg:py-32 bg-[#030712] relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-600/5 rounded-full blur-[120px]" />
+
       <div className="container mx-auto px-4 relative">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-2 bg-[#0369a1]/10 text-[#0369a1] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#06b6d4]" />
-              Contato
-            </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0f172a] mb-6 leading-tight">
-              Vamos <span className="gradient-text">Conversar?</span>
-            </h2>
-            <p className="text-xl text-[#64748b] leading-relaxed">
-              Preencha o formulário e entrarei em contato para entender 
-              seus objetivos e explicar como posso ajudar.
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-400 font-medium text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+            Contato
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight text-balance">
+            Vamos <span className="gradient-text">Conversar?</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed text-pretty">
+            Me chame no WhatsApp para entender seus objetivos e descobrir como
+            posso ajudar você a evoluir nas águas abertas.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative order-2 lg:order-1"
+          >
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
+              <Image
+                src="/images/assessoria.rebollo.png"
+                alt="Thiago Rebollo - Assessoria de Natação em Águas Abertas"
+                fill
+                className="object-cover"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent" />
+              {/* Border glow effect */}
+              <div className="absolute inset-0 rounded-3xl border border-cyan-500/20" />
+            </div>
+
+            {/* Floating card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="absolute -bottom-6 -right-6 md:right-6 glass rounded-2xl p-5 max-w-[280px]"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center shrink-0">
+                  <Clock className="w-7 h-7 text-[#030712]" />
+                </div>
+                <div>
+                  <p className="font-bold text-white text-lg">Até 24h</p>
+                  <p className="text-gray-400 text-sm">Respondo todas as mensagens</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -left-4 w-24 h-24 border border-cyan-500/20 rounded-2xl" />
+          </motion.div>
+
+          {/* Content Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="order-1 lg:order-2"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-balance">
+              Comece sua evolução com um{" "}
+              <span className="gradient-text">diagnóstico gratuito</span>
+            </h3>
+            <p className="text-gray-400 leading-relaxed mb-8 text-pretty">
+              Fale diretamente comigo no WhatsApp. Sem formulários, sem espera —
+              vamos conversar sobre seus objetivos e montar o melhor caminho para
+              sua performance.
             </p>
-          </div>
 
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-            {/* Left side - Contact Info */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="bg-gradient-to-br from-[#0c4a6e] to-[#0369a1] rounded-3xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
-                
-                <div className="space-y-6">
-                  <a
-                    href="mailto:contato@thiagorebollo.com"
-                    className="flex items-center gap-4 group"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-[#06b6d4] transition-colors">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-white/60 text-sm">E-mail</p>
-                      <p className="font-medium">contato@thiagorebollo.com</p>
-                    </div>
-                  </a>
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/5511996139633?text=Olá Thiago! Quero saber mais sobre a assessoria personalizada para águas abertas."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full whatsapp-btn text-white font-semibold text-lg transition-all duration-300 mb-10"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Conversar no WhatsApp
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
 
-                  <a
-                    href="https://wa.me/5511999999999"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 group"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-[#06b6d4] transition-colors">
-                      <MessageCircle className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-white/60 text-sm">WhatsApp</p>
-                      <p className="font-medium">+55 (11) 99999-9999</p>
-                    </div>
-                  </a>
-
-                  <a
-                    href="https://instagram.com/thiagorebollo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 group"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-[#06b6d4] transition-colors">
-                      <Instagram className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-white/60 text-sm">Instagram</p>
-                      <p className="font-medium">@thiagorebollo</p>
-                    </div>
-                  </a>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-white/60 text-sm">Atendimento</p>
-                      <p className="font-medium">100% Online - Todo Brasil</p>
-                    </div>
+            {/* Contact info list */}
+            <div className="space-y-4">
+              {contactInfo.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="flex items-center gap-4 glass rounded-2xl p-4 hover:bg-white/5 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0 group-hover:bg-cyan-500/20 transition-colors">
+                    <item.icon className="w-5 h-5 text-cyan-400" />
                   </div>
-                </div>
+                  <div>
+                    <p className="text-gray-500 text-sm">{item.label}</p>
+                    <p className="font-medium text-white">{item.value}</p>
+                  </div>
+                </a>
+              ))}
 
-                {/* Decorative wave */}
-                <div className="mt-8 pt-8 border-t border-white/10">
-                  <p className="text-white/70 text-sm">
-                    Respondo todas as mensagens em até 24 horas.
-                  </p>
+              {/* Atendimento (no link) */}
+              <div className="flex items-center gap-4 glass rounded-2xl p-4">
+                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-cyan-400" />
+                </div>
+                <div>
+                  <p className="text-gray-500 text-sm">Atendimento</p>
+                  <p className="font-medium text-white">100% Online - Todo Brasil</p>
                 </div>
               </div>
             </div>
-
-            {/* Right side - Form */}
-            <div className="lg:col-span-3">
-              <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl shadow-[#0369a1]/5 border border-[#e2e8f0]">
-                {isSubmitted ? (
-                  <div className="h-full flex flex-col items-center justify-center text-center py-16">
-                    <div className="w-20 h-20 rounded-full bg-[#f0fdfa] flex items-center justify-center mb-6">
-                      <CheckCircle className="w-10 h-10 text-[#14b8a6]" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-[#0f172a] mb-2">
-                      Mensagem Enviada!
-                    </h3>
-                    <p className="text-[#64748b]">
-                      Entrarei em contato em breve.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-semibold text-[#0f172a]">
-                          Nome completo
-                        </label>
-                        <Input
-                          id="name"
-                          type="text"
-                          placeholder="Seu nome"
-                          required
-                          className="rounded-xl border-[#e2e8f0] focus:border-[#06b6d4] focus:ring-[#06b6d4] py-6"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-semibold text-[#0f172a]">
-                          E-mail
-                        </label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="seu@email.com"
-                          required
-                          className="rounded-xl border-[#e2e8f0] focus:border-[#06b6d4] focus:ring-[#06b6d4] py-6"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="phone" className="text-sm font-semibold text-[#0f172a]">
-                          WhatsApp
-                        </label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="(11) 99999-9999"
-                          className="rounded-xl border-[#e2e8f0] focus:border-[#06b6d4] focus:ring-[#06b6d4] py-6"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="experience" className="text-sm font-semibold text-[#0f172a]">
-                          Experiência
-                        </label>
-                        <select
-                          id="experience"
-                          className="flex h-12 w-full rounded-xl border border-[#e2e8f0] bg-white px-4 py-3 text-sm focus:border-[#06b6d4] focus:ring-[#06b6d4] focus:outline-none text-[#0f172a]"
-                        >
-                          <option value="">Selecione...</option>
-                          <option value="beginner">Nadador iniciante</option>
-                          <option value="intermediate">Nadador intermediário</option>
-                          <option value="advanced">Nadador avançado</option>
-                          <option value="triathlete">Triatleta</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-semibold text-[#0f172a]">
-                        Conte sobre seus objetivos
-                      </label>
-                      <Textarea
-                        id="message"
-                        placeholder="Quais são seus objetivos? Tem alguma prova em vista? Qual sua disponibilidade para treinos?"
-                        rows={5}
-                        className="rounded-xl border-[#e2e8f0] focus:border-[#06b6d4] focus:ring-[#06b6d4] resize-none"
-                      />
-                    </div>
-
-                    <Button 
-                      type="submit" 
-                      className="w-full rounded-full py-7 text-lg font-semibold bg-gradient-to-r from-[#0369a1] to-[#0ea5e9] hover:opacity-90 shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      Enviar Mensagem
-                      <Send className="w-5 h-5 ml-2" />
-                    </Button>
-                  </form>
-                )}
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
