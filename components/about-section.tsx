@@ -141,7 +141,7 @@ export function AboutSection() {
             </div>
 
             <a 
-              href="https://wa.me/5521999999999?text=Olá Thiago! Vi seu currículo impressionante e quero saber mais sobre a assessoria."
+              href="https://wa.me/5511996139633?text=Olá Thiago! Vi seu currículo impressionante e quero saber mais sobre a assessoria."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 group"
