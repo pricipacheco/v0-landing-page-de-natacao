@@ -1,184 +1,254 @@
 "use client"
 
-import { Check, ArrowRight, Star, Zap } from "lucide-react"
+import { Crosshair, Waves, Bike, Check, ArrowRight, Trophy } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import type { LucideIcon } from "lucide-react"
+import type { ReactNode } from "react"
 
-const services = [
+type Plan = {
+  category: string
+  icon: LucideIcon
+  title: string
+  description: ReactNode
+  features: string[]
+  priceLabel: string
+  currency: string
+  price: string
+  period?: string
+  cta: string
+  featured?: boolean
+  badge?: string
+}
+
+const plans: Plan[] = [
   {
-    name: "Assessoria Express",
-    description: "Para quem busca orientação específica em algum aspecto",
-    price: "R$ 199,00 (pagamento único)",
-    featured: false,
-    icon: Star,
+    category: "Consultoria",
+    icon: Crosshair,
+    title: "Diagnóstico Técnico",
+    description: (
+      <>
+        Para quem precisa de uma{" "}
+        <strong className="font-semibold text-white">análise profunda</strong> e
+        orientações específicas.
+      </>
+    ),
     features: [
-      "Sessão ONLINE com Thiago Rebollo",
-      "Análise técnica",
-      "Correções personalizadas",
-      "Dicas de navegação",
-      "Orientação de equipamentos",
-      "Relatório detalhado",
+      "Análise técnica completa em vídeo",
+      "Identificação de pontos de melhoria",
+      "Orientações personalizadas",
+      "Dicas de treino e navegação",
+      "Relatório detalhado com recomendações",
     ],
+    priceLabel: "Investimento único",
+    currency: "R$",
+    price: "199",
+    cta: "Quero meu diagnóstico",
   },
   {
-    name: "Natação de Águas Abertas",
-    description: "Acompanhamento completo e personalizado para seus objetivos",
-    price: "R$ 299,90 (mensal)",
+    category: "Assessoria Premium",
+    icon: Waves,
+    title: "Águas Abertas",
+    description: (
+      <>
+        Acompanhamento individual para quem deseja{" "}
+        <strong className="font-semibold text-white">acelerar sua evolução</strong>{" "}
+        nas águas abertas.
+      </>
+    ),
+    features: [
+      "Treino personalizado e periodizado",
+      "Correção técnica para eliminar erros que atrasam sua evolução",
+      "Análise de vídeos com feedback detalhado",
+      "Estratégia e navegação para provas",
+      "Ajustes constantes para evolução contínua",
+      "Suporte via WhatsApp com Thiago sempre que precisar",
+      "Orientação pré-prova e análise pós-prova",
+      "Suporte para nutrição e equipamentos",
+    ],
+    priceLabel: "Investimento mensal",
+    currency: "R$",
+    price: "299",
+    period: "/mês",
+    cta: "Quero evoluir agora",
     featured: true,
-    icon: Zap,
-    features: [
-      "Planilhas de treino semanais personalizadas",
-      "Análise de vídeos",
-      "Acompanhamento via WhatsApp",
-      "Ajustes de treino conforme feedback",
-      "Periodização para suas provas",
-      "Suporte para nutrição e equipamentos",
-      "Acesso ao grupo de Whatsapp da Rebollo Assessoria",
-      "Orientação pré-provas",
-      "Acompanhamento do Thiago Rebollo em competições (com estrutura completa)"
-    ],
+    badge: "Mais escolhido pelos atletas",
   },
   {
-    name: "Triathlon",
-    description: "Treinamento completo para atletas de triathlon",
-    price: "R$ 399,90 (mensal)",
-    featured: false,
-    icon: Star,
+    category: "Assessoria Premium",
+    icon: Bike,
+    title: "Triathlon Performance",
+    description: (
+      <>
+        Integração completa para quem busca{" "}
+        <strong className="font-semibold text-white">máxima performance</strong> nas
+        três modalidades.
+      </>
+    ),
     features: [
-      "Planilhas de treino semanais personalizadas",
+      "Treino integrado natação, ciclismo e corrida",
+      "Planilhas personalizadas e periodizadas",
       "Análise de vídeos",
-      "Acompanhamento via Whatsapp",
-      "Ajuste de treino conforme feedback",
-      "Periodização para suas provas",
+      "Ajustes constantes para evolução contínua",
+      "Acompanhamento via WhatsApp",
+      "Orientação pré-prova e estratégia de prova",
+      "Acompanhamento do Thiago Rebollo em competições (com estrutura completa)",
       "Suporte para nutrição e equipamentos",
-      "Acesso ao grupo de Whatsapp da Rebollo Assessoria",
-      "Orientação pré-provas",
-      "Acompanhamento do Thiago Rebollo no IronMan (com estrutura completa)"
     ],
+    priceLabel: "Investimento mensal",
+    currency: "R$",
+    price: "399",
+    period: "/mês",
+    cta: "Quero minha melhor versão",
   },
 ]
 
+function PlanCard({ plan }: { plan: Plan }) {
+  const Icon = plan.icon
+  const featured = plan.featured
+
+  return (
+    <div
+      className={`group relative flex flex-col rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 ${
+        featured
+          ? "border border-[#06b6d4]/70 bg-gradient-to-b from-[#0a2233] to-[#061420] shadow-[0_0_40px_rgba(6,182,212,0.35),inset_0_1px_0_rgba(6,182,212,0.15)] lg:-mt-6 lg:mb-6"
+          : "border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,0.08)] ring-1 ring-inset ring-white/5 hover:border-[#06b6d4]/70 hover:shadow-[0_10px_40px_rgba(0,0,0,0.6),0_0_25px_rgba(6,182,212,0.2)]"
+      }`}
+    >
+      {/* Featured badge */}
+      {plan.badge && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span className="flex items-center gap-2 whitespace-nowrap rounded-full border border-[#06b6d4]/60 bg-[#06121e] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#22d3ee] shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+            <Trophy className="h-3.5 w-3.5" />
+            {plan.badge}
+          </span>
+        </div>
+      )}
+
+      {/* top glow line */}
+      <div
+        className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#06b6d4]/60 to-transparent transition-opacity duration-500 ${
+          featured ? "opacity-100" : "opacity-50 group-hover:opacity-100"
+        }`}
+      />
+
+      {/* Header: icon + category + title */}
+      <div className="flex items-start gap-4">
+        <div className="relative shrink-0">
+          <div className="absolute inset-0 rounded-full border border-[#06b6d4]/20 animate-[spin_18s_linear_infinite]" />
+          <div className="absolute -inset-1 rounded-full border border-dashed border-[#06b6d4]/10 animate-[spin_26s_linear_infinite_reverse]" />
+          <div
+            className={`relative flex h-14 w-14 items-center justify-center rounded-full border bg-[#06121e] transition-shadow duration-500 ${
+              featured
+                ? "border-[#06b6d4]/60 shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+                : "border-[#06b6d4]/40 shadow-[0_0_20px_rgba(6,182,212,0.25)] group-hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+            }`}
+          >
+            <Icon className="h-6 w-6 text-[#22d3ee]" strokeWidth={1.5} />
+          </div>
+        </div>
+
+        <div className="min-w-0 pt-1">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#06b6d4]">
+            {plan.category}
+          </p>
+          <h3 className="mt-1 text-2xl font-bold leading-tight text-white">
+            {plan.title}
+          </h3>
+        </div>
+      </div>
+
+      {/* Description */}
+      <p className="mt-4 text-sm leading-relaxed text-white/55">{plan.description}</p>
+
+      {/* Divider */}
+      <div className="mt-6 h-px w-full bg-gradient-to-r from-[#0e2a3f] via-[#06b6d4]/20 to-transparent" />
+
+      {/* Features */}
+      <ul className="mt-6 flex-grow space-y-3">
+        {plan.features.map((feature) => (
+          <li key={feature} className="flex items-start gap-2.5 text-sm text-white/70">
+            <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#06b6d4]/50 bg-[#06b6d4]/10">
+              <Check className="h-2.5 w-2.5 text-[#22d3ee]" strokeWidth={3} />
+            </span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+
+      {/* Price */}
+      <div className="mt-8">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">
+          {plan.priceLabel}
+        </p>
+        <div className="mt-1 flex items-end gap-1">
+          <span className="text-lg font-semibold text-white/80">{plan.currency}</span>
+          <span className="text-5xl font-black leading-none text-white">
+            {plan.price}
+          </span>
+          {plan.period && (
+            <span className="mb-1 text-sm font-medium text-white/50">
+              {plan.period}
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <Button
+        asChild
+        className={`mt-6 w-full rounded-full py-6 text-base font-semibold transition-all duration-300 ${
+          featured
+            ? "bg-gradient-to-r from-[#06b6d4] to-[#0ea5e9] text-[#03121c] shadow-[0_0_25px_rgba(6,182,212,0.5)] hover:shadow-[0_0_35px_rgba(6,182,212,0.7)]"
+            : "border border-[#06b6d4]/40 bg-[#06b6d4]/10 text-[#22d3ee] hover:border-[#06b6d4]/70 hover:bg-[#06b6d4]/20"
+        }`}
+      >
+        <Link href="#contato" className="flex items-center justify-center gap-2">
+          {plan.cta}
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </Button>
+    </div>
+  )
+}
+
 export function ServicesSection() {
   return (
-    <section id="servicos" className="py-24 lg:py-32 bg-[#f8fafc] relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-gradient-to-r from-[#06b6d4]/10 to-transparent rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-gradient-to-l from-[#0369a1]/10 to-transparent rounded-full blur-3xl -translate-y-1/2" />
-      
-      <div className="container mx-auto px-4 relative">
+    <section
+      id="servicos"
+      className="relative overflow-hidden bg-[#030712] py-24 lg:py-32"
+    >
+      {/* Ambient background glows */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-1/3 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-[#06b6d4]/5 blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_55%,#030712_100%)]" />
+      </div>
+
+      <div className="container relative mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-flex items-center gap-2 bg-[#0369a1]/10 text-[#0369a1] font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#06b6d4]" />
-            Serviços
+        <div className="mx-auto mb-20 max-w-3xl text-center">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#0e2a3f] bg-[#060d17] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-[#06b6d4]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#22d3ee] shadow-[0_0_8px_rgba(34,211,238,0.9)]" />
+            Planos de Assessoria
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0f172a] mb-6 leading-tight">
-            Escolha o Plano <span className="gradient-text">Ideal</span> para Você
+          <h2 className="text-balance text-4xl font-black leading-[1.05] tracking-tight text-white md:text-5xl lg:text-6xl">
+            Como você quer{" "}
+            <span className="bg-gradient-to-r from-[#22d3ee] to-[#06b6d4] bg-clip-text text-transparent">
+              evoluir?
+            </span>
           </h2>
-          <p className="text-xl text-[#64748b] leading-relaxed">
-            Diferentes formatos de acompanhamento para atender às suas necessidades 
-            e objetivos, sempre com foco em resultados.
+          <div className="mx-auto mt-4 h-px w-24 bg-gradient-to-r from-transparent via-[#06b6d4]/60 to-transparent" />
+          <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/60 md:text-lg">
+            Três formas de acompanhamento para diferentes objetivos. O método é o
+            mesmo:{" "}
+            <span className="font-semibold text-[#22d3ee]">resultados reais.</span>
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
-          {services.map((service, index) => (
-            <div
-              key={service.name}
-              className={`relative rounded-3xl p-8 transition-all duration-500 flex flex-col ${
-                service.featured
-                  ? "bg-gradient-to-br from-[#0c4a6e] via-[#0369a1] to-[#0ea5e9] shadow-2xl shadow-[#0369a1]/30 scale-105 z-10"
-                  : "bg-white border-2 border-[#e2e8f0] hover:border-[#06b6d4]/50 hover:shadow-xl"
-              }`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {service.featured && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2">
-                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
-                    <Zap className="w-4 h-4" />
-                    Mais Popular
-                  </span>
-                </div>
-              )}
-
-              <div className="mb-8">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
-                  service.featured 
-                    ? "bg-white/20" 
-                    : "bg-gradient-to-br from-[#06b6d4] to-[#0ea5e9]"
-                }`}>
-                  <service.icon className={`w-7 h-7 ${service.featured ? "text-white" : "text-white"}`} />
-                </div>
-                
-                <h3
-                  className={`text-2xl font-bold mb-3 ${
-                    service.featured ? "text-white" : "text-[#0f172a]"
-                  }`}
-                >
-                  {service.name}
-                </h3>
-                <p
-                  className={`text-base ${
-                    service.featured
-                      ? "text-white/80"
-                      : "text-[#64748b]"
-                  }`}
-                >
-                  {service.description}
-                </p>
-              </div>
-
-              <ul className="space-y-4 mb-10 flex-grow">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <div
-                      className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                        service.featured
-                          ? "bg-[#5eead4] text-[#0c4a6e]"
-                          : "bg-[#06b6d4]/20 text-[#06b6d4]"
-                      }`}
-                    >
-                      <Check className="w-4 h-4" strokeWidth={3} />
-                    </div>
-                    <span
-                      className={`${
-                        service.featured
-                          ? "text-white/90"
-                          : "text-[#475569]"
-                      }`}
-                    >
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mb-8">
-                <span
-                  className={`text-2xl font-bold ${
-                    service.featured ? "text-white" : "text-[#0f172a]"
-                  }`}
-                >
-                  {service.price}
-                </span>
-              </div>
-              
-
-              <Button
-                asChild
-                className={`w-full rounded-full py-6 text-lg font-semibold transition-all duration-300 ${
-                  service.featured
-                    ? "bg-white text-[#0369a1] hover:bg-[#f0fdfa] shadow-lg"
-                    : "bg-gradient-to-r from-[#0369a1] to-[#0ea5e9] text-white hover:opacity-90 shadow-md hover:shadow-lg"
-                }`}
-              >
-                <Link href="#contato" className="flex items-center justify-center gap-2">
-                  Contratar agora
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-            </div>
+        {/* Plans grid */}
+        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-3">
+          {plans.map((plan) => (
+            <PlanCard key={plan.title} plan={plan} />
           ))}
         </div>
       </div>
