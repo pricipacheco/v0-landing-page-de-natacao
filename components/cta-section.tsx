@@ -26,7 +26,7 @@ export function CTASection() {
       {/* Wave pattern */}
       <div className="absolute bottom-0 left-0 right-0 h-24 overflow-hidden">
         <svg 
-          className="absolute bottom-0 w-[200%] h-full animate-wave opacity-20"
+          className="absolute bottom-0 w-[200%] h-full opacity-20"
           viewBox="0 0 1440 120" 
           preserveAspectRatio="none"
         >
