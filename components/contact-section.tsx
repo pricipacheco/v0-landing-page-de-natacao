@@ -1,155 +1,90 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Instagram, MapPin, Clock, MessageCircle } from "lucide-react"
+import { MessageCircle, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 const WHATSAPP_LINK =
   "https://wa.me/5511996139633?text=Olá Thiago! Quero saber mais sobre a assessoria personalizada para águas abertas."
 
-const contactInfo = [
-  {
-    icon: Instagram,
-    label: "Instagram",
-    value: "@thiagorebollo",
-    href: "https://instagram.com/thiagorebollo",
-  },
-  {
-    icon: Mail,
-    label: "E-mail",
-    value: "contato@thiagorebollo.com",
-    href: "mailto:contato@thiagorebollo.com",
-  },
-]
-
 export function ContactSection() {
   return (
-    <section id="contato" className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[150px]" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-600/5 rounded-full blur-[120px]" />
+    <section
+      id="contato"
+      className="relative overflow-hidden bg-[#061024] py-24 lg:py-32"
+    >
+      {/* Ambient glows */}
+      <div className="pointer-events-none absolute -top-32 right-0 h-[600px] w-[600px] rounded-full bg-[#06b6d4]/10 blur-[160px]" />
+      <div className="pointer-events-none absolute -bottom-32 left-0 h-[500px] w-[500px] rounded-full bg-[#0b3a6b]/40 blur-[150px]" />
 
-      <div className="container mx-auto px-4 relative">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-600 font-medium text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
-            Contato
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight text-balance">
-            Vamos <span className="gradient-text">Conversar?</span>
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed text-pretty">
-            Me chame no WhatsApp para entender seus objetivos e descobrir como
-            posso ajudar você a evoluir nas águas abertas.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Image Side */}
+      <div className="container relative mx-auto px-4">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Image collage */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative order-2 lg:order-1"
+            className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] ring-1 ring-inset ring-white/5">
               <Image
-                src="/images/assessoria.rebollo.png"
-                alt="Thiago Rebollo - Assessoria de Natação em Águas Abertas"
-                fill
-                className="object-cover"
+                src="/images/contato-rebollo.png"
+                alt="Thiago Rebollo orientando atletas na piscina, em águas abertas e comemorando com a equipe"
+                width={1080}
+                height={1080}
+                className="h-auto w-full object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
               />
-              {/* Border glow effect */}
-              <div className="absolute inset-0 rounded-3xl border border-cyan-500/20" />
+              {/* soft cyan edge glow */}
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-[#06b6d4]/20" />
             </div>
-
-            {/* Floating card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="absolute -bottom-6 -right-6 md:right-6 bg-white rounded-2xl p-5 max-w-[280px] shadow-lg border border-gray-100"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center shrink-0">
-                  <Clock className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900 text-lg">Até 24h</p>
-                  <p className="text-gray-500 text-sm">Respondo todas as mensagens</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 border border-cyan-500/20 rounded-2xl" />
           </motion.div>
 
-          {/* Content Side */}
+          {/* Text content */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
-            className="order-1 lg:order-2"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-balance">
-              Comece sua evolução com um{" "}
-              <span className="gradient-text">diagnóstico gratuito</span>
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-8 text-pretty">
-              Fale diretamente comigo no WhatsApp. Sem formulários, sem espera —
-              vamos conversar sobre seus objetivos e montar o melhor caminho para
-              sua performance.
+            {/* Badge */}
+            <div className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-[#06b6d4]/40 bg-[#06b6d4]/5 px-4 py-2">
+              <MessageCircle className="h-4 w-4 text-[#22d3ee]" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7dd3e8]">
+                Fale diretamente com Thiago
+              </span>
+            </div>
+
+            {/* Title */}
+            <h2 className="text-balance text-4xl font-bold leading-[1.05] tracking-tight text-white md:text-5xl lg:text-6xl">
+              Sua evolução começa com uma{" "}
+              <span className="text-[#22d3ee]">conversa.</span>
+            </h2>
+
+            {/* Description */}
+            <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-slate-300 md:text-lg">
+              Conte diretamente para o Thiago quais são seus objetivos. Em poucos
+              minutos você receberá uma{" "}
+              <span className="text-[#22d3ee]">orientação personalizada</span>{" "}
+              para entender qual é o melhor caminho para evoluir nas águas abertas
+              ou no triathlon.
             </p>
 
-            {/* WhatsApp Button */}
+            {/* WhatsApp CTA */}
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full whatsapp-btn text-white font-semibold text-lg transition-all duration-300 mb-10"
+              className="group mt-10 inline-flex items-center gap-3 rounded-2xl bg-[#25a75c] px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(37,167,92,0.35)] transition-all duration-300 hover:bg-[#22c55e] hover:shadow-[0_12px_40px_rgba(37,167,92,0.5)]"
             >
-              <MessageCircle className="w-5 h-5" />
-              Conversar no WhatsApp
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15">
+                <MessageCircle className="h-5 w-5" />
+              </span>
+              Quero Evoluir com o Thiago
+              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
-
-            {/* Contact info list */}
-            <div className="space-y-4">
-              {contactInfo.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="flex items-center gap-4 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm hover:border-cyan-500/30 hover:shadow-md transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0 group-hover:bg-cyan-500/20 transition-colors">
-                    <item.icon className="w-5 h-5 text-cyan-600" />
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-sm">{item.label}</p>
-                    <p className="font-medium text-gray-900">{item.value}</p>
-                  </div>
-                </a>
-              ))}
-
-              {/* Atendimento (no link) */}
-              <div className="flex items-center gap-4 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-cyan-600" />
-                </div>
-                <div>
-                  <p className="text-gray-500 text-sm">Atendimento</p>
-                  <p className="font-medium text-gray-900">100% Online - Todo Brasil</p>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
