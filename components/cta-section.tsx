@@ -47,7 +47,9 @@ export function CTASection() {
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Pronto para Dominar as{" "}
-            <span className="text-[#5eead4]">Águas Abertas?</span>
+             <span className="bg-gradient-to-r from-[#22d3ee] to-[#06b6d4] bg-clip-text text-transparent">
+              Águas Abertas?
+            </span>
           </h2>
 
           {/* Description */}
