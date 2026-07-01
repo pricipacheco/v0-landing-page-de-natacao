@@ -15,7 +15,7 @@ export function CTASection() {
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden">
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0369a1] via-[#0ea5e9] to-[#003060]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0369a1] via-[#oc4a6e] to-[#003060]" />
       
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
