@@ -71,9 +71,9 @@ const pillars: Pillar[] = [
 function PillarCard({ pillar }: { pillar: Pillar }) {
   const Icon = pillar.icon
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-[#0e2a3f] bg-[#060d17]/80 p-6 backdrop-blur-sm transition-all duration-500 hover:border-[#06b6d4]/60 hover:bg-[#081420]/90">
+    <div className="group relative overflow-hidden rounded-2xl border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,0.08)] ring-1 ring-inset ring-white/5 backdrop-blur-sm transition-all duration-500 hover:border-[#06b6d4]/70 hover:shadow-[0_10px_40px_rgba(0,0,0,0.6),0_0_25px_rgba(6,182,212,0.2)]">
       {/* subtle top glow line */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#06b6d4]/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#06b6d4]/60 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
 
       <div className="flex items-start gap-4">
         {/* HUD icon ring */}
