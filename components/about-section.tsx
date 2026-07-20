@@ -102,13 +102,13 @@ export function AboutSection() {
             
             <div className="space-y-5 text-lg text-gray-400 leading-relaxed mb-10">
               <p>
-                Com mais de <span className="text-white font-medium">12 anos dedicados</span> à natação em águas abertas e triathlon, 
-                construí uma metodologia baseada em experiência real nas provas mais desafiadoras do mundo.
+                Treinador há mais de <span className="text-white font-medium">14 anos</span> e atleta desde a infância, Thiago Rebollo desenvolveu uma metodologia única, 
+                construída a partir da combinação entre experiência prática, conhecimento científico e vivência nas principais provas de águas abertas e triathlon do país.
               </p>
               <p>
-                Minha missão é levar esse conhecimento para atletas que querem 
-                <span className="text-cyan-400 font-medium"> ir além das planilhas genéricas</span> — 
-                com treinos pensados para seu contexto, seus objetivos e sua rotina.
+                Cada treino e estratégia 
+                <span className="text-cyan-400 font-medium"> aplicado hoje com seus alunos</span> — 
+                foi, antes, testado e aperfeiçoado na própria pele.
               </p>
             </div>
 
