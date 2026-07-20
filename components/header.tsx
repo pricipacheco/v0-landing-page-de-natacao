@@ -63,13 +63,13 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://wa.me/5511996139633?text=Olá Thiago! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
+              href="https://wa.me/5511996139633?text=Olá! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-[#030712] font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
             >
               <MessageCircle className="w-4 h-4" />
-              Fale Comigo
+              Fale com o Time
             </a>
           </div>
 
@@ -106,13 +106,13 @@ export function Header() {
                   </Link>
                 ))}
                 <a
-                  href="https://wa.me/5511996139633?text=Olá Thiago! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
+                  href="https://wa.me/5511996139633?text=Olá! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 mt-4 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-[#030712] font-semibold"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Fale Comigo
+                  Fale com o Time
                 </a>
               </nav>
             </div>
