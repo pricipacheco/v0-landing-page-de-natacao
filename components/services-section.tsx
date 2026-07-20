@@ -62,7 +62,7 @@ const plans: Plan[] = [
       "Análise de vídeos com feedback detalhado",
       "Estratégia e navegação para provas",
       "Ajustes constantes para evolução contínua",
-      "Suporte via WhatsApp com Thiago sempre que precisar",
+      "Suporte via WhatsApp com o Time sempre que precisar",
       "Orientação pré-prova e análise pós-prova",
       "Suporte para nutrição e equipamentos",
     ],
@@ -112,13 +112,13 @@ function PlanCard({ plan }: { plan: Plan }) {
       className={`group relative flex flex-col rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 ${
         featured
           ? "border border-[#06b6d4]/70 bg-gradient-to-b from-[#0a2233] to-[#061420] shadow-[0_0_40px_rgba(6,182,212,0.35),inset_0_1px_0_rgba(6,182,212,0.15)] lg:-mt-6 lg:mb-6"
-          : "border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,0.08)] ring-1 ring-inset ring-white/5 hover:border-[#06b6d4]/70 hover:shadow-[0_10px_40px_rgba(0,0,0,0.6),0_0_25px_rgba(6,182,212,0.2)]"
+          : "border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,0.08)] ring-1 ring-inset ring-white/5 hover:border-[#06b6d4]/50 hover:shadow-[0_12px_40px_rgba(6,182,212,0.2)]"
       }`}
     >
       {/* Featured badge */}
       {plan.badge && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="flex items-center gap-2 whitespace-nowrap rounded-full border border-[#06b6d4]/60 bg-[#06121e] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#22d3ee] shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+          <span className="flex items-center gap-2 whitespace-nowrap rounded-full border border-[#06b6d4]/60 bg-[#06121e] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#22d3ee]">
             <Trophy className="h-3.5 w-3.5" />
             {plan.badge}
           </span>
