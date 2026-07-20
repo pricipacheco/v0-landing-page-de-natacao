@@ -39,7 +39,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center font-bold text-lg text-[#030712] group-hover:shadow-lg group-hover:shadow-cyan-500/30 transition-all duration-300 overflow-hidden">
               <Image
-                src="/images/logo.rebollo.png"
+                src="/images/logo-rebollo-assessoria.png"
                 alt="Logo Thiago Rebollo"
                 width={40}
                 height={40}
