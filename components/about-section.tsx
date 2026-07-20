@@ -46,7 +46,7 @@ export function AboutSection() {
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
               <Image
-                src="/images/Thiago-treinador-rebollo.png"
+                src="/images/sobre-thiago-rebollo.png"
                 alt="Thiago Rebollo - Atleta e Treinador de Águas Abertas"
                 fill
                 className="object-cover"
@@ -97,7 +97,7 @@ export function AboutSection() {
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Atleta, treinador e<br />
-              <span className="gradient-text">referência nacional em Águas Abertas</span>
+              <span className="gradient-text">referência nacional em Natação de Águas Abertas</span>
             </h2>
             
             <div className="space-y-5 text-lg text-gray-400 leading-relaxed mb-10">
