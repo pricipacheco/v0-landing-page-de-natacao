@@ -40,8 +40,8 @@ export function Header() {
             <Image
               src="/images/logo-rebollo-assessoria.png"
               alt="Logo Thiago Rebollo"
-              width={120}
-              height={50}
+              width={160}
+              height={65}
               className="h-auto object-contain group-hover:opacity-80 transition-opacity"
             />
           </Link>
