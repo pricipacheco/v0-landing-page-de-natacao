@@ -17,52 +17,52 @@ const pillars: Pillar[] = [
   {
     number: "01",
     icon: Activity,
-    title: "Análise Técnica",
+    title: "Planejamento Inteligente",
     description:
       "Avaliação completa da sua técnica através de vídeos e dados para identificar e corrigir pontos de melhoria.",
     results: [
-      "Mais eficiência na braçada",
-      "Menor gasto energético",
-      "Nade mais rápido com menos esforço",
+      "Evolução consistente",
+      "Treinos individualizados",
+      "Preparação específica para cada prova",
     ],
     align: "left",
   },
   {
     number: "02",
     icon: Compass,
-    title: "Navegação e Orientação",
+    title: "Correção Técnica Contínua",
     description:
       "Treinamento focado em leitura do ambiente, posicionamento e navegação eficiente em qualquer condição.",
     results: [
-      "Nade mais reto e economize energia",
-      "Melhor posicionamento na prova",
-      "Mais segurança em águas abertas",
+      "Menor desperdício de energia",
+      "Mais velocidade com menos esforço",
+      "Correções constante ao longo da temporada",
     ],
     align: "right",
   },
   {
     number: "03",
     icon: Brain,
-    title: "Preparação Mental",
+    title: "Análise de Performance",
     description:
       "Desenvolvimento mental para lidar com desafios, pressão, mar agitado e momentos críticos da prova.",
     results: [
-      "Mais controle emocional",
-      "Confiança para qualquer desafio",
-      "Decisões melhores durante a prova",
+      "Controle da evolução",
+      "Mais eficiência em cada sessão",
+      "Performance baseada em dados",
     ],
     align: "left",
   },
   {
     number: "04",
     icon: BarChart3,
-    title: "Periodização Inteligente",
+    title: "Preparação Mental para Competir",
     description:
       "Planejamento individualizado que considera seus objetivos, rotina e fases de treino para picos de performance.",
     results: [
-      "Treino certo na hora certa",
-      "Evolução constante e sustentável",
-      "Chegue no pico da sua melhor forma",
+      "Mais segurança nas provas",
+      "Controle emocional",
+      "Estratégia para diferentes condições de prova",
     ],
     align: "right",
   },
