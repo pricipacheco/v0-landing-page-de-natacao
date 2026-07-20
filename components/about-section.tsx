@@ -102,13 +102,13 @@ export function AboutSection() {
             
             <div className="space-y-5 text-lg text-gray-400 leading-relaxed mb-10">
               <p>
-                Com mais de <span className="text-white font-medium">12 anos dedicados</span> à natação em águas abertas e triathlon, 
-                construí uma metodologia baseada em experiência real nas provas mais desafiadoras do mundo.
+                Atleta de natação desde a infância e, <span className="text-white font-medium">há mais de 14 anos, atuando como treinador</span>, Thiago Rebollo desenvolveu uma metodologia única, construída a partir da combinação entre experiência prática, conhecimento científico e vivência nas principais provas de águas abertas e triathlon do país.
               </p>
               <p>
-                Minha missão é levar esse conhecimento para atletas que querem 
-                <span className="text-cyan-400 font-medium"> ir além das planilhas genéricas</span> — 
-                com treinos pensados para seu contexto, seus objetivos e sua rotina.
+                Cada treino, estratégia e ajuste aplicados hoje aos seus atletas foi, antes, testado e aperfeiçoado na própria pele.
+              </p>
+              <p>
+                Sua missão é <span className="text-white font-medium">transformar toda essa experiência em resultados reais para seus alunos</span>, por meio de um <span className="text-cyan-400 font-medium">acompanhamento individualizado</span> que reúne planejamento inteligente, correção técnica, análise de performance e preparação mental.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ export function AboutSection() {
               href="https://wa.me/5511996139633?text=Olá Thiago! Vi seu currículo impressionante e quero saber mais sobre a assessoria."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 group"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 hover:border-cyan-500/30 transition-all d[...]
             >
               <MessageCircle className="w-5 h-5 text-cyan-400" />
               Conversar com o Time Rebollo
