@@ -146,10 +146,10 @@ function CoreVisual() {
         {/* Center text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/80">
-            Performance
+            MÉTODO
           </p>
           <p className="text-glow bg-gradient-to-b from-white to-[#22d3ee] bg-clip-text text-6xl font-black leading-none text-transparent md:text-7xl">
-            360°
+            REBOLLO
           </p>
           <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.3em] text-white/70">
             Evolução
