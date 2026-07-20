@@ -41,7 +41,7 @@ export function Header() {
               <Image
                 src="/images/logo-rebollo-assessoria.png"
                 alt="Logo Thiago Rebollo"
-                width={40}
+                width={150}
                 height={40}
                 className="w-full h-full object-contain"
               />
