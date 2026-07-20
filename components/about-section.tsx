@@ -147,7 +147,7 @@ export function AboutSection() {
               className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 group"
             >
               <MessageCircle className="w-5 h-5 text-cyan-400" />
-              Conversar com Thiago
+              Conversar com o Time Rebollo
               <span className="text-cyan-400 group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </motion.div>
