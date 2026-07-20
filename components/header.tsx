@@ -36,20 +36,14 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center font-bold text-lg text-[#030712] group-hover:shadow-lg group-hover:shadow-cyan-500/30 transition-all duration-300 overflow-hidden">
-              <Image
-                src="/images/logo-rebollo-assessoria.png"
-                alt="Logo Thiago Rebollo"
-                width={150}
-                height={40}
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-lg font-semibold text-white">Thiago Rebollo</span>
-              <span className="block text-xs text-cyan-400 -mt-0.5">Assessoria Esportiva</span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/logo-rebollo-assessoria.png"
+              alt="Logo Thiago Rebollo"
+              width={120}
+              height={50}
+              className="h-auto object-contain group-hover:opacity-80 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -72,7 +66,7 @@ export function Header() {
               href="https://wa.me/5511996139633?text=Olá Thiago! Gostaria de saber mais sobre a assessoria de natação em águas abertas."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-[#030712] font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-[#030712] font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
             >
               <MessageCircle className="w-4 h-4" />
               Fale Comigo
