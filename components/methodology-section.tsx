@@ -19,7 +19,7 @@ const pillars: Pillar[] = [
     icon: Activity,
     title: "Planejamento Inteligente",
     description:
-      "Avaliação completa da sua técnica através de vídeos e dados para identificar e corrigir pontos de melhoria.",
+      "Cada treino é construído exclusivamente para você. Toda a periodização é desenvolvida com base em mais de 30 anos de experiência como atleta e 14 anos treinando nadadores e triatletas, respeitando seu nível, objetivo e rotina.",
     results: [
       "Evolução consistente",
       "Treinos individualizados",
@@ -32,7 +32,7 @@ const pillars: Pillar[] = [
     icon: Compass,
     title: "Correção Técnica Contínua",
     description:
-      "Treinamento focado em leitura do ambiente, posicionamento e navegação eficiente em qualquer condição.",
+      "Você envia vídeos dos seus treinos e recebe análises técnicas detalhadas, além de suporte direto pelo WhatsApp para esclarecer dúvidas e ajustar a execução sempre que necessário.",
     results: [
       "Menor desperdício de energia",
       "Mais velocidade com menos esforço",
@@ -45,7 +45,7 @@ const pillars: Pillar[] = [
     icon: Brain,
     title: "Análise de Performance",
     description:
-      "Desenvolvimento mental para lidar com desafios, pressão, mar agitado e momentos críticos da prova.",
+      "Utilizamos o TrainingPeaks para acompanhar sua performance, controlar o treinamento e identificar os ajustes que realmente fazem diferença para o seu objetivo.",
     results: [
       "Controle da evolução",
       "Mais eficiência em cada sessão",
@@ -58,7 +58,7 @@ const pillars: Pillar[] = [
     icon: BarChart3,
     title: "Preparação Mental para Competir",
     description:
-      "Planejamento individualizado que considera seus objetivos, rotina e fases de treino para picos de performance.",
+      "A preparação mental faz parte do processo. Você recebe orientações e briefings pré-prova para controlar a ansiedade, tomar melhores decisões durante o percurso e competir com mais confiança.",
     results: [
       "Mais segurança nas provas",
       "Controle emocional",
