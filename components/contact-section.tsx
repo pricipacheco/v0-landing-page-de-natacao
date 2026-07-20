@@ -5,7 +5,7 @@ import { MessageCircle, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 const WHATSAPP_LINK =
-  "https://wa.me/5511996139633?text=Olá Thiago! Quero saber mais sobre a assessoria personalizada para águas abertas."
+  "https://wa.me/5511996139633?text=Olá! Quero saber mais sobre a assessoria personalizada para águas abertas."
 
 export function ContactSection() {
   return (
@@ -53,7 +53,7 @@ export function ContactSection() {
             <div className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-[#06b6d4]/40 bg-[#06b6d4]/5 px-4 py-2">
               <MessageCircle className="h-4 w-4 text-[#22d3ee]" />
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7dd3e8]">
-                Fale diretamente com Thiago
+                Fale com o Time
               </span>
             </div>
 
@@ -65,7 +65,7 @@ export function ContactSection() {
 
             {/* Description */}
             <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-slate-300 md:text-lg">
-              Conte diretamente para o Thiago quais são seus objetivos. Em poucos
+              Conte para o Time quais são seus objetivos. Em poucos
               minutos você receberá uma{" "}
               <span className="text-[#22d3ee]">orientação personalizada</span>{" "}
               para entender qual é o melhor caminho para evoluir nas águas abertas
@@ -82,7 +82,7 @@ export function ContactSection() {
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15">
                 <MessageCircle className="h-5 w-5" />
               </span>
-              Quero Evoluir com o Thiago
+              Quero Evoluir com o Time
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </motion.div>
