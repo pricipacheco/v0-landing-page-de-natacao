@@ -71,7 +71,7 @@ const pillars: Pillar[] = [
 function PillarCard({ pillar }: { pillar: Pillar }) {
   const Icon = pillar.icon
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,0.08)] ring-1 ring-inset ring-white/5 backdrop-blur-sm transition-all duration-500 hover:border-[#06b6d4]/70 hover:shadow-[0_10px_40px_rgba(0,0,0,0.6),0_0_25px_rgba(6,182,212,0.2)]">
+    <div className="group relative overflow-hidden rounded-2xl border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,[...]
       {/* subtle top glow line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#06b6d4]/60 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -80,7 +80,7 @@ function PillarCard({ pillar }: { pillar: Pillar }) {
         <div className="relative shrink-0">
           <div className="absolute inset-0 rounded-full border border-[#06b6d4]/20 animate-[spin_16s_linear_infinite]" />
           <div className="absolute -inset-1 rounded-full border border-dashed border-[#06b6d4]/10 animate-[spin_24s_linear_infinite_reverse]" />
-          <div className="relative flex h-14 w-14 items-center justify-center rounded-full border border-[#06b6d4]/40 bg-[#06121e] shadow-[0_0_20px_rgba(6,182,212,0.25)] transition-shadow duration-500 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+          <div className="relative flex h-14 w-14 items-center justify-center rounded-full border border-[#06b6d4]/40 bg-[#06121e] shadow-[0_0_20px_rgba(6,182,212,0.25)] transition-shadow duration[...]
             <Icon className="h-6 w-6 text-[#22d3ee]" strokeWidth={1.5} />
           </div>
         </div>
@@ -144,18 +144,21 @@ function CoreVisual() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/40 via-[#030712]/55 to-[#030712]/85" />
 
         {/* Center text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/80">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-1">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.35em] text-white/85 leading-tight">
             MÉTODO
           </p>
-          <p className="text-glow bg-gradient-to-b from-white to-[#22d3ee] bg-clip-text text-6xl font-black leading-none text-transparent md:text-7xl">
+          <p className="text-glow bg-gradient-to-b from-white to-[#22d3ee] bg-clip-text text-5xl font-black leading-none text-transparent md:text-6xl">
             REBOLLO
           </p>
-          <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.3em] text-white/70">
-            Evolução
-            <br />
-            Contínua
-          </p>
+          <div className="mt-3 flex flex-col items-center gap-0.5">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/75 leading-tight">
+              Evolução
+            </p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/75 leading-tight">
+              Contínua
+            </p>
+          </div>
         </div>
       </div>
 
@@ -204,7 +207,7 @@ export function MethodologySection() {
           <div className="mt-3 flex items-center justify-center gap-4">
             <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#06b6d4]/60" />
             <span className="text-sm font-medium uppercase tracking-[0.4em] text-white/70">
-              Treinamento Esportivo
+              Em Águas Abertas
             </span>
             <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#06b6d4]/60" />
           </div>
