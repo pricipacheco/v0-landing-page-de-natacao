@@ -107,8 +107,7 @@ export function AboutSection() {
               </p>
               <p>
                 Cada treino e estratégia 
-                <span className="text-cyan-400 font-medium"> aplicado hoje com seus alunos</span>  
-                 foi, antes, testado e aperfeiçoado na própria pele.
+                <span className="text-cyan-400 font-medium"> aplicado hoje com seus alunos</span> foi, antes, testado e aperfeiçoado na própria pele.
               </p>
             </div>
 
