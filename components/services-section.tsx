@@ -23,59 +23,61 @@ type Plan = {
 
 const plans: Plan[] = [
   {
-    category: "Consultoria",
+    category: "Assessoria",
     icon: Crosshair,
-    title: "Diagnóstico Técnico",
+    title: "Natação em Águas Abertas",
     description: (
       <>
-        Para quem precisa de uma{" "}
-        <strong className="font-semibold text-white">análise profunda</strong> e
-        orientações específicas.
+        Treinamento {" "}
+        <strong className="font-semibold text-white">focado e especializado</strong> para
+        quem busca evolução consistente em águas abertas.
       </>
     ),
     features: [
-      "Análise técnica completa em vídeo",
-      "Identificação de pontos de melhoria",
-      "Orientações personalizadas",
-      "Dicas de treino e navegação",
-      "Relatório detalhado com recomendações",
-    ],
-    priceLabel: "Investimento único",
-    currency: "R$",
-    price: "199",
-    cta: "Quero meu diagnóstico",
-  },
-  {
-    category: "Assessoria Premium",
-    icon: Waves,
-    title: "Águas Abertas",
-    description: (
-      <>
-        Acompanhamento individual para quem deseja{" "}
-        <strong className="font-semibold text-white">acelerar sua evolução</strong>{" "}
-        nas águas abertas.
-      </>
-    ),
-    features: [
-      "Treino personalizado e periodizado",
+      "Treino individualizado e periodizado",
       "Correção técnica para eliminar erros que atrasam sua evolução",
-      "Análise de vídeos com feedback detalhado",
-      "Estratégia e navegação para provas",
-      "Ajustes constantes para evolução contínua",
-      "Suporte via WhatsApp com o Time sempre que precisar",
+      "Análise de vídeos",
+      "Ajustes constantes de Treino via TrainingPeaks",
+      "Suporte via WhatsApp",
       "Orientação pré-prova e análise pós-prova",
-      "Suporte para nutrição e equipamentos",
+      "Feedbacks semanais",
     ],
     priceLabel: "Investimento mensal",
     currency: "R$",
-    price: "299",
+    price: "290",
+    period: "/mês",
+    cta: "Quero meu diagnóstico",
+  },
+  {
+    category: "Assessoria",
+    icon: Waves,
+    title: "Natação + Corrida",
+    description: (
+      <>
+        Treinamento periodizado para quem quer evoluir{" "}
+        <strong className="font-semibold text-white">com estratégia e resultado</strong>{" "}
+        nas duas modalidades.
+      </>
+    ),
+    features: [
+      "Treino individualizado e periodizado",
+      "Correção técnica para eliminar erros que atrasam sua evolução",
+      "Análise de vídeos",
+      "Ajustes constantes de Treino via TrainingPeaks",
+      "Suporte via WhatsApp",
+      "Orientação pré-prova e análise pós-prova",
+      "Feedbacks semanais",
+    ],
+    priceLabel: "Investimento mensal",
+    currency: "R$",
+    price: "340",
     period: "/mês",
     cta: "Quero evoluir agora",
     featured: true,
     badge: "Mais escolhido pelos atletas",
   },
   {
-    category: "Assessoria Premium",
+    category: "Assessoria",
     icon: Bike,
     title: "Triathlon Performance",
     description: (
@@ -86,18 +88,17 @@ const plans: Plan[] = [
       </>
     ),
     features: [
-      "Treino integrado natação, ciclismo e corrida",
-      "Planilhas personalizadas e periodizadas",
+      "Treino individualizado e periodizado",
+      "Correção técnica para eliminar erros que atrasam sua evolução",
       "Análise de vídeos",
-      "Ajustes constantes para evolução contínua",
-      "Acompanhamento via WhatsApp",
-      "Orientação pré-prova e estratégia de prova",
-      "Acompanhamento do Thiago Rebollo em competições (com estrutura completa)",
-      "Suporte para nutrição e equipamentos",
+      "Ajustes constantes de Treino via TrainingPeaks",
+      "Suporte via WhatsApp",
+      "Orientação pré-prova e análise pós-prova",
+      "Feedbacks semanais",
     ],
     priceLabel: "Investimento mensal",
     currency: "R$",
-    price: "399",
+    price: "390",
     period: "/mês",
     cta: "Quero minha melhor versão",
   },
