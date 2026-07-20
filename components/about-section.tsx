@@ -8,22 +8,22 @@ const achievements = [
   {
     icon: Trophy,
     title: "Recordista Leme ao Pontal",
-    description: "Recorde geral da travessia mais tradicional do Rio de Janeiro"
+    description: "Detentor do Recorde geral há 8 anos"
   },
   {
     icon: Compass,
     title: "Canal da Mancha",
-    description: "34km atravessando o canal mais desafiador do mundo"
+    description: "6º melhor marca mundial em de 2021"
   },
   {
     icon: Award,
     title: "Ironman Brasil",
-    description: "Experiência nas maiores provas de triathlon do país"
+    description: "Participou duas vezes da maior prova de triathlon do país"
   },
   {
     icon: GraduationCap,
     title: "Formação Especializada",
-    description: "Educação Física + Especialização em Treinamento Desportivo e Triathlon"
+    description: "Formado em Educação Física e Pós-Graduado em Treinamento Desportivo e Triathlon"
   }
 ]
 
@@ -96,8 +96,8 @@ export function AboutSection() {
             </span>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Atleta, professor e<br />
-              <span className="gradient-text">especialista em águas abertas</span>
+              Atleta, treinador e<br />
+              <span className="gradient-text">referência nacional em Águas Abertas</span>
             </h2>
             
             <div className="space-y-5 text-lg text-gray-400 leading-relaxed mb-10">
