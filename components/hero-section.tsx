@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-natacao-thiago.png"
+          src="/images/hero-thiago.png"
           alt="Nadador em águas abertas"
           fill
           className="object-cover object-center"
