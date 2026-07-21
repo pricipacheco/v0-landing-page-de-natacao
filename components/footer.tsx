@@ -1,7 +1,8 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Mail, Waves, Youtube, ArrowUpRight } from "lucide-react"
+import { Instagram, Mail, Youtube, ArrowUpRight } from "lucide-react"
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -27,7 +28,7 @@ export function Footer() {
           >
             <path
               fill="#061024"
-              d="M0,30L48,25C96,20,192,10,288,10C384,10,480,20,576,25C672,30,768,30,864,25C960,20,1056,10,1152,10C1248,10,1344,20,1392,25L1440,30L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+              d="M0,30L48,25C96,20,192,10,288,10C384,10,480,20,576,25C672,30,768,30,864,25C960,20,1056,10,1152,10C1248,10,1344,20,1392,25L1440,30L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C[...]
             />
           </svg>
         </div>
@@ -37,18 +38,14 @@ export function Footer() {
             {/* Brand */}
             <div className="md:col-span-2">
               <Link href="/" className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-[#06b6d4] flex items-center justify-center">
-                  <Waves className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold text-white tracking-tight">
-                  THIAGO REBOLLO
-                </span>
+                <Image
+                  src="/logo-rebollo-assessoria"
+                  alt="Rebollo Assessoria"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </Link>
-              <p className="text-white/70 leading-relaxed mb-8 max-w-md">
-                Assessoria online especializada em natação para águas abertas. 
-                Transformando nadadores e triatletas através de metodologia 
-                comprovada e acompanhamento personalizado.
-              </p>
               <div className="flex items-center gap-3">
                 <a
                   href="https://instagram.com/thiagorebollo"
