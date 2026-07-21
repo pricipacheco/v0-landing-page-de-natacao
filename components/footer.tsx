@@ -37,13 +37,15 @@ export function Footer() {
           <div className="grid md:grid-cols-4 gap-12">
             {/* Brand */}
             <div className="md:col-span-2">
-              <Link href="/" className="flex items-center gap-3 mb-6">
+              <Link href="/" className="inline-block mb-6">
                 <Image
-                  src="/logo-rebollo-assessoria"
-                  alt="Rebollo Assessoria"
-                  width={48}
-                  height={48}
-                  className="object-contain"
+                  src="/images/logo-rebollo-assessoria.png"
+                  alt="Rebollo Assessoria - Logo"
+                  width={160}
+                  height={65}
+                  className="h-auto w-auto object-contain hover:opacity-80 transition-opacity"
+                  priority={false}
+                  quality={90}
                 />
               </Link>
               <div className="flex items-center gap-3">
