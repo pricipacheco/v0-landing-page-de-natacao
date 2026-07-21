@@ -36,19 +36,19 @@ export function Footer() {
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-4 gap-12">
             {/* Brand */}
-            <div className="md:col-span-2 flex flex-col">
-              <Link href="/" className="inline-block mb-4">
+            <div className="md:col-span-2">
+              <Link href="/" className="flex items-center gap-3 mb-6">
                 <Image
                   src="/images/logo-rebollo-assessoria.png"
                   alt="Rebollo Assessoria - Logo"
-                  width={100}
-                  height={40}
-                  className="h-auto w-auto object-contain hover:opacity-80 transition-opacity"
+                  width={144}
+                  height={58}
+                  className="h-auto object-contain"
                   priority={false}
                   quality={90}
                 />
               </Link>
-              <div className="flex items-center gap-3 mt-2">
+              <div className="flex items-center gap-3">
                 <a
                   href="https://instagram.com/thiagorebollo"
                   target="_blank"
