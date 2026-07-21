@@ -35,7 +35,7 @@ const plans: Plan[] = [
     ),
     features: [
       "Treino individualizado e periodizado",
-      "Correção técnica para eliminar erros que atrasam sua evolução",
+      "Corre��ão técnica para eliminar erros que atrasam sua evolução",
       "Análise de vídeos",
       "Ajustes constantes de Treino via TrainingPeaks",
       "Suporte via WhatsApp",
@@ -47,6 +47,8 @@ const plans: Plan[] = [
     price: "290",
     period: "/mês",
     cta: "Quero começar hoje",
+    featured: true,
+    badge: "Mais escolhido pelos atletas",
   },
   {
     category: "Assessoria",
@@ -73,8 +75,6 @@ const plans: Plan[] = [
     price: "340",
     period: "/mês",
     cta: "Quero evoluir agora",
-    featured: true,
-    badge: "Mais escolhido pelos atletas",
   },
   {
     category: "Assessoria",
@@ -112,8 +112,8 @@ function PlanCard({ plan }: { plan: Plan }) {
     <div
       className={`group relative flex flex-col rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 ${
         featured
-          ? "border border-[#06b6d4]/70 bg-gradient-to-b from-[#0a2233] to-[#061420] shadow-[0_0_40px_rgba(6,182,212,0.35),inset_0_1px_0_rgba(6,182,212,0.15)] lg:-mt-6 lg:mb-6"
-          : "border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,0.08)] ring-1 ring-inset ring-white/5 hover:border-[#06b6d4]/50 hover:shadow-[0_12px_40px_rgba(6,182,212,0.2)]"
+          ? "border border-[#06b6d4]/70 bg-gradient-to-b from-[#0a2233] to-[#061420] shadow-[0_0_40px_rgba(6,182,212,0.35),inset_0_1px_0_rgba(6,182,212,0.15)] lg:col-start-1 lg:row-span-1"
+          : "border border-[#164a68] bg-gradient-to-b from-[#0b1826] to-[#070f1a] shadow-[0_8px_30px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(6,182,212,0.08)] ring-1 ring-inset ring-white/5 hover:border-[#06b6d4]/40 hover:shadow-[0_8px_40px_rgba(6,182,212,0.1),inset_0_1px_0_rgba(6,182,212,0.08)]"
       }`}
     >
       {/* Featured badge */}
