@@ -18,14 +18,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden">
       {/* Main footer */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero-natacao-thiago.png"
-          alt="Nadador em águas abertas"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+       <div className="bg-gradient-to-br from-[#0c4a6e] via-[#0369a1] to-[#0c4a6e]">
         {/* Wave top */}
         <div className="h-16 overflow-hidden">
           <svg 
