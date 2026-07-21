@@ -207,7 +207,7 @@ export function MethodologySection() {
           <div className="mt-3 flex items-center justify-center gap-4">
             <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#06b6d4]/60" />
             <span className="text-sm font-medium uppercase tracking-[0.4em] text-white/70">
-              Em Águas Abertas
+              Evolução Consistente
             </span>
             <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#06b6d4]/60" />
           </div>
