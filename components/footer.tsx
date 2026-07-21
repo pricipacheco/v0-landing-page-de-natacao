@@ -41,8 +41,8 @@ export function Footer() {
                 <Image
                   src="/images/logo-rebollo-assessoria.png"
                   alt="Rebollo Assessoria - Logo"
-                  width={173}
-                  height={70}
+                  width={208}
+                  height={84}
                   className="h-auto object-contain"
                   priority={false}
                   quality={90}
