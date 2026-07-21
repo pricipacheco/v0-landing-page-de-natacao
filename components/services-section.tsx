@@ -46,7 +46,7 @@ const plans: Plan[] = [
     currency: "R$",
     price: "290",
     period: "/mês",
-    cta: "Quero meu diagnóstico",
+    cta: "Quero começar hoje",
   },
   {
     category: "Assessoria",
