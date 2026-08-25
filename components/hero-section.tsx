@@ -10,15 +10,15 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/Banner-rebollo.png"
+          src="/images/banner.assessoria.png"
           alt="Nadador em águas abertas"
           fill
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/65 via-[#030712]/35 to-[#030712]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/95 via-[#030712]/65 to-[#030712]/20" />
-        <div className="absolute inset-0 bg-cyan-950/10 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-900/10 to-slate-950/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/55 via-slate-900/20 to-transparent" />
+        <div className="absolute inset-0 bg-sky-950/5 mix-blend-multiply" />
       </div>
 
       {/* Animated gradient orbs */}
