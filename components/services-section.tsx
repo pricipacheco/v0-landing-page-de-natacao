@@ -1,6 +1,6 @@
 "use client"
 
-import { Crosshair, Waves, Bike, Check, ArrowRight, Trophy, SportShoe } from "lucide-react"
+import { Crosshair, Waves, Bike, Check, ArrowRight, Trophy, Footprints } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import type { LucideIcon } from "lucide-react"
@@ -52,7 +52,7 @@ const plans: Plan[] = [
   },
   {
     category: "Assessoria",
-    icon: SportShoe,
+    icon: Footprints,
     title: "Natação + Corrida",
     description: (
       <>
