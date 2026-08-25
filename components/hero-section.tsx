@@ -15,7 +15,7 @@ export function HeroSection() {
           fill
           priority
           unoptimized
-          className="object-cover object-[68%_center] md:left-[24%] md:w-[76%] md:object-contain md:object-right"
+          className="object-cover object-[72%_center] md:left-[16%] md:w-[84%] md:object-contain md:object-right"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 via-38% to-slate-950/35 via-62% to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/35 via-transparent to-slate-950/55" />
@@ -27,7 +27,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-20">
-          <div className="max-w-3xl text-left">
+          <div className="max-w-2xl text-left">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
           >
             Seu próximo nível
             <br />
