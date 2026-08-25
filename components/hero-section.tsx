@@ -10,14 +10,15 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-thiago.png"
+          src="/images/Banner-rebollo.png"
           alt="Nadador em águas abertas"
           fill
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/70 via-[#030712]/50 to-[#030712]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-transparent to-[#030712]/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/65 via-[#030712]/35 to-[#030712]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/95 via-[#030712]/65 to-[#030712]/20" />
+        <div className="absolute inset-0 bg-cyan-950/10 mix-blend-multiply" />
       </div>
 
       {/* Animated gradient orbs */}
@@ -26,7 +27,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl text-left">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,9 +46,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
-            Você não está evoluindo
+            Seu próximo nível
             <br />
-            <span className="gradient-text text-glow">porque está treinando sozinho.</span>
+            <span className="gradient-text text-glow">começa com o treino certo.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -55,7 +56,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed"
           >
             Assessoria de Natação em Águas Abertas para nadadores e triatletas. 
             <span className="text-white font-medium"> Comece a evoluir </span> 
@@ -67,7 +68,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-start gap-4 mb-16"
           >
             <a
               href="https://wa.me/5511996139633?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
