@@ -70,7 +70,7 @@ html {
 }
 
 .text-glow {
-  text-shadow: 0 0 40px rgba(6, 182, 212, 0.6), 0 0 80px rgba(6, 182, 212, 0.4);
+  text-shadow: 0 0 16px rgba(6, 182, 212, 0.32), 0 0 32px rgba(6, 182, 212, 0.16);
 }
 
 /* Glass morphism */
