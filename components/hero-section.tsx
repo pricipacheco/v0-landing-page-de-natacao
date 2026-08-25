@@ -6,18 +6,19 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030712]">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+      {/* Imagem lateralizada, com mais respiro para a leitura */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-thiago.png"
-          alt="Nadador em águas abertas"
+          src="/images/banner.assessoria.png"
+          alt="Equipe de natação em águas abertas"
           fill
-          className="object-cover object-center"
           priority
+          unoptimized
+          className="object-cover object-[72%_center] md:left-[16%] md:w-[84%] md:object-contain md:object-right"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/70 via-[#030712]/50 to-[#030712]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-transparent to-[#030712]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/65 via-38% to-slate-950/20 via-62% to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-transparent to-slate-950/35" />
       </div>
 
       {/* Animated gradient orbs */}
@@ -26,16 +27,16 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="w-full lg:w-1/2 max-w-xl text-left">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/55 border border-white/20 backdrop-blur-sm mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="text-sm text-gray-300">Assessoria Esportiva</span>
+            <span className="text-sm text-slate-200">Assessoria Esportiva</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -43,11 +44,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
           >
-            Você não está evoluindo
+            Seu próximo nível
             <br />
-            <span className="gradient-text text-glow">porque está treinando sozinho.</span>
+            <span className="gradient-text text-glow">começa com o treino certo.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -55,7 +56,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-slate-200 max-w-2xl mb-10 leading-relaxed"
           >
             Assessoria de Natação em Águas Abertas para nadadores e triatletas. 
             <span className="text-white font-medium"> Comece a evoluir </span> 
@@ -67,7 +68,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-start gap-4 mb-16"
           >
             <a
               href="https://wa.me/5511996139633?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
@@ -81,7 +82,7 @@ export function HeroSection() {
             </a>
             <a
               href="#metodo"
-              className="flex items-center gap-2 px-6 py-4 text-gray-400 hover:text-white transition-colors"
+              className="flex items-center gap-2 px-6 py-4 text-slate-200 hover:text-white transition-colors"
             >
               Conhecer Planos
             </a>
@@ -100,6 +101,11 @@ export function HeroSection() {
             <ChevronDown className="w-5 h-5 animate-bounce" />
           </a>
         </motion.div>
+      </div>
+    </section>
+  )
+}
+
       </div>
     </section>
   )
