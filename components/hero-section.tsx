@@ -105,8 +105,3 @@ export function HeroSection() {
     </section>
   )
 }
-
-      </div>
-    </section>
-  )
-}
