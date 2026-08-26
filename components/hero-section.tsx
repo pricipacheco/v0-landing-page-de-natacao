@@ -21,8 +21,8 @@ export function HeroSection() {
       </div>
 
       {/* Desktop full-bleed banner (background) */}
-      <div className="hidden md:block absolute inset-0">
-        <div className="relative w-full h-screen">
+      <div className="hidden md:block absolute inset-0 h-screen">
+        <div className="relative w-full h-full">
           <Image
             src="/images/banner.assessoria.png"
             alt="Equipe de natação em águas abertas"
@@ -31,10 +31,10 @@ export function HeroSection() {
             unoptimized
             className="object-cover object-center w-full h-full"
           />
+          {/* overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/55 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 to-transparent" />
         </div>
-
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/55 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 via-transparent to-slate-950/15" />
       </div>
 
       {/* Animated gradient orbs (optional) */}
