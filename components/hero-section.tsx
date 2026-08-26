@@ -1,58 +1,41 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle, ChevronDown } from "lucide-react"
+import { MessageCircle, ChevronDown, Award, Users, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen md:h-screen bg-slate-950 overflow-hidden">
-      {/* Mobile stacked banner (aparece primeiro no mobile) */}
-      <div className="block md:hidden w-full h-64 sm:h-80 relative">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030712]">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
         <Image
-          src="/images/banner.assessoria.png"
-          alt="Equipe de natação em águas abertas"
+          src="/images/hero-natacao-thiago.png"
+          alt="Nadador em águas abertas"
           fill
-          priority
-          unoptimized
           className="object-cover object-center"
+          priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 via-transparent to-slate-950/15" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/70 via-[#030712]/50 to-[#030712]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-transparent to-[#030712]/60" />
       </div>
 
-      {/* Desktop full-bleed banner (background) */}
-      <div className="hidden md:block absolute inset-0 h-screen">
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/banner.assessoria.png"
-            alt="Equipe de natação em águas abertas"
-            fill
-            priority
-            unoptimized
-            className="object-cover object-center w-full h-full"
-          />
-          {/* overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/55 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 to-transparent" />
-        </div>
-      </div>
+      {/* Animated gradient orbs */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-600/15 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
 
-      {/* Animated gradient orbs (optional) */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px] animate-pulse pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-600/15 rounded-full blur-[120px] animate-pulse pointer-events-none" style={{ animationDelay: "1s" }} />
-
-      {/* Content: on mobile this is below the stacked image; on desktop it overlays the banner */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 pt-6 md:pt-0 pb-20">
-        <div className="w-full md:w-1/2 max-w-xl text-left mx-auto md:mx-0 md:absolute md:left-16 md:top-1/2 md:-translate-y-1/2">
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-20">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/55 border border-white/20 backdrop-blur-sm mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="text-sm text-slate-200">Assessoria Esportiva</span>
+            <span className="text-sm text-gray-300">Assessoria Especializada em Águas Abertas</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -60,10 +43,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
-            <span className="block sm:inline">Seu próximo nível</span>{" "}
-            <span className="block sm:inline gradient-text text-glow">começa com o treino certo.</span>
+            Você não está evoluindo
+            <br />
+            <span className="gradient-text text-glow">porque está treinando sozinho.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -71,10 +55,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base md:text-lg text-slate-200 max-w-2xl mb-8 leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Assessoria de Natação em Águas Abertas para nadadores e triatletas.
-            <span className="text-white font-medium"> Comece a evoluir </span>
+            Assessoria de Natação em Águas Abertas para nadadores e triatletas. 
+            <span className="text-white font-medium"> Comece a evoluir </span> 
             com método, correção técnica e acompanhamento real.
           </motion.p>
 
@@ -83,13 +67,13 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
             <a
               href="https://wa.me/5511996139633?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-6 py-3 rounded-full whatsapp-btn text-white font-semibold text-base whitespace-nowrap transition-all duration-300 max-w-max"
+              className="group flex items-center gap-3 px-8 py-4 rounded-full whatsapp-btn text-white font-semibold text-lg transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5" />
               Quero um Diagnóstico Gratuito
@@ -97,26 +81,57 @@ export function HeroSection() {
             </a>
             <a
               href="#metodo"
-              className="inline-flex items-center gap-2 px-4 py-3 text-slate-200 hover:text-white transition-colors whitespace-nowrap"
+              className="flex items-center gap-2 px-6 py-4 text-gray-400 hover:text-white transition-colors"
             >
               Conhecer Planos
             </a>
           </motion.div>
 
-          {/* Scroll indicator for mobile/desktop */}
+          {/* Stats */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="mt-4 md:mt-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
           >
-            <a href="#sobre" className="flex flex-col items-center gap-2 text-gray-500 hover:text-cyan-400 transition-colors w-max">
-              <span className="text-xs uppercase tracking-wider">Saiba mais</span>
-              <ChevronDown className="w-5 h-5 animate-bounce" />
-            </a>
+            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
+                <Award className="w-6 h-6 text-cyan-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-1">+12</div>
+              <div className="text-sm text-gray-500">Anos de Experiência</div>
+            </div>
+            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
+                <Users className="w-6 h-6 text-cyan-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-1">+500</div>
+              <div className="text-sm text-gray-500">Atletas Assessorados</div>
+            </div>
+            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-cyan-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-1">34km</div>
+              <div className="text-sm text-gray-500">Canal da Mancha</div>
+            </div>
           </motion.div>
         </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <a href="#sobre" className="flex flex-col items-center gap-2 text-gray-500 hover:text-cyan-400 transition-colors">
+            <span className="text-xs uppercase tracking-wider">Saiba mais</span>
+            <ChevronDown className="w-5 h-5 animate-bounce" />
+          </a>
+        </motion.div>
       </div>
     </section>
   )
 }
+
