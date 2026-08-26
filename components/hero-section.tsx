@@ -44,7 +44,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
           >
             Seu próximo nível
             <br />
@@ -56,7 +56,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-200 max-w-2xl mb-10 leading-relaxed"
+            className="text-base md:text-lg text-slate-200 max-w-2xl mb-10 leading-relaxed"
           >
             Assessoria de Natação em Águas Abertas para nadadores e triatletas. 
             <span className="text-white font-medium"> Comece a evoluir </span> 
@@ -68,13 +68,13 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-start gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-16"
           >
             <a
               href="https://wa.me/5511996139633?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-8 py-4 rounded-full whatsapp-btn text-white font-semibold text-lg transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-6 py-3 rounded-full whatsapp-btn text-white font-semibold text-base whitespace-nowrap transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5" />
               Quero um Diagnóstico Gratuito
@@ -82,7 +82,7 @@ export function HeroSection() {
             </a>
             <a
               href="#metodo"
-              className="flex items-center gap-2 px-6 py-4 text-slate-200 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-3 text-slate-200 hover:text-white transition-colors whitespace-nowrap"
             >
               Conhecer Planos
             </a>
