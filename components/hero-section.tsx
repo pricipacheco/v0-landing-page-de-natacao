@@ -18,7 +18,7 @@ export function HeroSection() {
           className="object-cover object-[72%_center] md:left-[16%] md:w-[84%] md:object-contain md:object-right"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/55 via-35% to-slate-950/10 via-15% to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-transparent to-slate-950/35" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 via-transparent to-slate-950/15" />
       </div>
 
       {/* Animated gradient orbs */}
