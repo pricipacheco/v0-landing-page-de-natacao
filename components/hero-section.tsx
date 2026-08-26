@@ -7,8 +7,21 @@ import Image from "next/image"
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
-      {/* Imagem lateralizada, com mais respiro para a leitura */}
-      <div className="absolute inset-0">
+      {/* Mobile banner block (stacked layout) */}
+      <div className="relative w-full md:hidden h-64 sm:h-72">
+        <Image
+          src="/images/banner.assessoria.png"
+          alt="Equipe de natação em águas abertas"
+          fill
+          priority
+          unoptimized
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/10 via-transparent to-slate-950/15" />
+      </div>
+
+      {/* Desktop/background image (kept as absolute for overlay effect) */}
+      <div className="absolute inset-0 hidden md:block">
         <Image
           src="/images/banner.assessoria.png"
           alt="Equipe de natação em águas abertas"
@@ -26,8 +39,8 @@ export function HeroSection() {
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-600/15 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-20">
-          <div className="w-full lg:w-1/2 max-w-xl text-left">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 pt-4 md:pt-32 pb-20">
+        <div className="w-full lg:w-1/2 max-w-xl text-left mx-auto md:mx-0">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -46,9 +59,8 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
           >
-            Seu próximo nível
-            <br />
-            <span className="gradient-text text-glow">começa com o treino certo.</span>
+            <span className="block sm:inline">Seu próximo nível</span>{" "}
+            <span className="block sm:inline gradient-text text-glow">começa com o treino certo.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -58,8 +70,8 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base md:text-lg text-slate-200 max-w-2xl mb-10 leading-relaxed"
           >
-            Assessoria de Natação em Águas Abertas para nadadores e triatletas. 
-            <span className="text-white font-medium"> Comece a evoluir </span> 
+            Assessoria de Natação em Águas Abertas para nadadores e triatletas.
+            <span className="text-white font-medium"> Comece a evoluir </span>
             com método, correção técnica e acompanhamento real.
           </motion.p>
 
@@ -74,7 +86,7 @@ export function HeroSection() {
               href="https://wa.me/5511996139633?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-6 py-3 rounded-full whatsapp-btn text-white font-semibold text-base whitespace-nowrap transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-6 py-3 rounded-full whatsapp-btn text-white font-semibold text-base whitespace-nowrap transition-all duration-300 max-w-max"
             >
               <MessageCircle className="w-5 h-5" />
               Quero um Diagnóstico Gratuito
