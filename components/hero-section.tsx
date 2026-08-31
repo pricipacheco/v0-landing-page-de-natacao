@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Imagem lateralizada, com mais respiro para a leitura */}
       <div className="absolute inset-0">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner.hero-rTXe3MaFsvPxcdF3DmXj84LwJs8iso.png"
+          src="banner.hero.png"
           alt="Equipe de natação em águas abertas"
           fill
           priority
