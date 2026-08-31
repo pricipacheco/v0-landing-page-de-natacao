@@ -17,7 +17,7 @@ export function HeroSection() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/70 via-[#030712]/50 to-[#030712]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-transparent to-[#030712]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/85 via-transparent to-[#030712]/25" />
       </div>
 
       {/* Animated gradient orbs */}
