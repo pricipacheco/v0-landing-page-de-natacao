@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle, ChevronDown, Award, Users, MapPin } from "lucide-react"
+import { MessageCircle, ChevronDown } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
@@ -67,7 +67,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
               href="https://wa.me/5511996139633?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
@@ -85,36 +85,6 @@ export function HeroSection() {
             >
               Conhecer Planos
             </a>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
-          >
-            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
-                <Award className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">+12</div>
-              <div className="text-sm text-gray-500">Anos de Experiência</div>
-            </div>
-            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
-                <Users className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">+500</div>
-              <div className="text-sm text-gray-500">Atletas Assessorados</div>
-            </div>
-            <div className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-3">
-                <MapPin className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-1">34km</div>
-              <div className="text-sm text-gray-500">Canal da Mancha</div>
-            </div>
           </motion.div>
         </div>
 
@@ -134,4 +104,3 @@ export function HeroSection() {
     </section>
   )
 }
-
