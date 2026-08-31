@@ -25,7 +25,7 @@ export function HeroSection() {
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-600/15 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-20">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-40">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <motion.div
@@ -93,7 +93,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2"
         >
           <a href="#sobre" className="flex flex-col items-center gap-2 text-gray-500 hover:text-cyan-400 transition-colors">
             <span className="text-xs uppercase tracking-wider">Saiba mais</span>
