@@ -29,7 +29,7 @@ export function ContactSection() {
           >
             <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] ring-1 ring-inset ring-white/5">
               <Image
-                src="/images/contato.thiago.rebollo.png"
+                src="/images/contato.rebollo.png"
                 alt="Thiago Rebollo orientando atletas na piscina, em águas abertas e comemorando com a equipe"
                 width={1080}
                 height={1080}
