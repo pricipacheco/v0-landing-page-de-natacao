@@ -27,7 +27,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 pt-32 pb-40">
         <div className="max-w-3xl">
-          {/* Badge */}
+          {/* Badge — largura livre, fora da restrição de texto */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,31 +38,34 @@ export function HeroSection() {
             <span className="text-xs sm:text-sm text-gray-300">Assessoria Especializada em Águas Abertas</span>
           </motion.div>
 
-          {/* Main Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
-          >
-            Você não está evoluindo
-            <br />
-            <span className="gradient-text text-glow">porque está treinando sozinho.</span>
-          </motion.h1>
+          {/* Bloco de texto restrito — h1 e p quebram antes do meio da página em telas grandes */}
+          <div className="max-w-full sm:max-w-md lg:max-w-[50%]">
+            {/* Main Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
+            >
+              Você não está evoluindo
+              <br />
+              <span className="gradient-text text-glow">porque está treinando sozinho.</span>
+            </motion.h1>
 
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed"
-          >
-            Assessoria de Natação em Águas Abertas para nadadores e triatletas. 
-            <span className="text-white font-medium"> Comece a evoluir </span> 
-            com método, correção técnica e acompanhamento real.
-          </motion.p>
+            {/* Subheadline */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 leading-relaxed"
+            >
+              Assessoria de Natação em Águas Abertas para nadadores e triatletas.
+              <span className="text-white font-medium"> Comece a evoluir </span>
+              com método, correção técnica e acompanhamento real.
+            </motion.p>
+          </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons — fora do bloco restrito, largura livre */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
