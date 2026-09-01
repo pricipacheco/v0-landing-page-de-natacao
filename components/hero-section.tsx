@@ -52,17 +52,6 @@ export function HeroSection() {
               <span className="gradient-text text-glow">começa com o treino certo</span>
             </motion.h1>
 
-            {/* Subheadline */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 leading-relaxed"
-            >
-              Assessoria de Natação em Águas Abertas e Triatlhon para atletas
-              <span className="text-white font-medium"> que querem evoluir </span>
-              com método, técnica e acompanhamento individual.
-            </motion.p>
           </div>
 
           {/* CTA Buttons — fora do bloco restrito, largura livre */}
@@ -73,7 +62,7 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row items-start gap-4"
           >
             <a
-              href="https://wa.me/5511996139633?text=Olá Thiago! Quero entender como funciona a assessoria personalizada para águas abertas."
+              href="https://wa.me/5511996139633?text=Ol%C3%A1 Thiago! Quero entender como funciona a assessoria personalizada para %C3%A1guas abertas."
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full whatsapp-btn text-white font-semibold text-sm sm:text-base transition-all duration-300"
