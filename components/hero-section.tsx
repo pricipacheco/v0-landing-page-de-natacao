@@ -76,7 +76,7 @@ export function HeroSection() {
               className="group flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full whatsapp-btn text-white font-semibold text-sm sm:text-base transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5" />
-              Quero um Diagnóstico Gratuito
+              Quero falar com o Time
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
             <a
