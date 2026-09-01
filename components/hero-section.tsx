@@ -35,7 +35,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="text-xs sm:text-sm text-gray-300">Assessoria Especializada em Águas Abertas</span>
+            <span className="text-xs sm:text-sm text-gray-300">Assessoria Especializada em Águas Abertas e Triatlhon</span>
           </motion.div>
 
           {/* Bloco de texto restrito — h1 e p quebram antes do meio da página em telas grandes */}
@@ -47,9 +47,9 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
             >
-              Você não está evoluindo
+              Seu próximo nível
               <br />
-              <span className="gradient-text text-glow">porque está treinando sozinho.</span>
+              <span className="gradient-text text-glow">começa com o treino certo</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -59,9 +59,9 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 leading-relaxed"
             >
-              Assessoria de Natação em Águas Abertas para nadadores e triatletas.
-              <span className="text-white font-medium"> Comece a evoluir </span>
-              com método, correção técnica e acompanhamento real.
+              Assessoria de Natação em Águas Abertas e Triatlhon para atletas
+              <span className="text-white font-medium"> que querem evoluir </span>
+              com método, técnica e acompanhamento individual.
             </motion.p>
           </div>
 
