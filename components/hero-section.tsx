@@ -47,9 +47,9 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-10"
             >
-              Você não está evoluindo
+              Seu próximo nível
               <br />
-              <span className="gradient-text text-glow">porque está treinando sozinho.</span>
+              <span className="gradient-text text-glow">começa com o treino certo</span>
             </motion.h1>
           </div>
 
