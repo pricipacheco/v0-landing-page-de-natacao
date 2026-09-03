@@ -13,7 +13,7 @@ export function HeroSection() {
           src="/images/Banner-rebollo.png"
           alt="Nadador em águas abertas"
           fill
-          className="object-cover object-[25%_50%] md:object-center"
+          className="object-cover object-[35%_60%] md:object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/80 via-transparent to-[#030712]/10" />
