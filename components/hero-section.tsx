@@ -17,7 +17,7 @@ export function HeroSection() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/80 via-transparent to-[#030712]/10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/85 via-[#030712]/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/85 via-[#030712]/30 to-transparent" />
       </div>
 
       {/* Animated gradient orbs */}
@@ -39,7 +39,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Bloco de texto restrito — h1 e p quebram antes do meio da página em telas grandes */}
-          <div className="max-w-full sm:max-w-md lg:max-w-[50%]">
+          <div className="max-w-full sm:max-w-md lg:max-w-[60%]">
             {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
